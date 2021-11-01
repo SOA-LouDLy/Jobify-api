@@ -33,4 +33,4 @@ module Jobify
       end
   
     end
-  end
+end
