@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/loudwigeodice/Desktop/data_mapper/init.rb": {
+      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/init.rb": {
         "lines": [
           null,
           null,
@@ -10,19 +10,19 @@
           1
         ]
       },
-      "/Users/loudwigeodice/Desktop/data_mapper/lib/init.rb": {
+      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/lib/init.rb": {
         "lines": [
           null,
           null,
           1,
           null,
           4,
-          4,
+          3,
           null,
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/data_mapper/lib/entities/job.rb": {
+      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/lib/entities/job.rb": {
         "lines": [
           null,
           null,
@@ -44,28 +44,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/data_mapper/lib/gateways_affinda/affinda_api.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/loudwigeodice/Desktop/data_mapper/lib/gateways_careerjet/job_api.rb": {
+      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/lib/gateways_careerjet/job_api.rb": {
         "lines": [
           null,
           null,
@@ -109,7 +88,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/data_mapper/lib/mappers/job_mapper.rb": {
+      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/lib/mappers/job_mapper.rb": {
         "lines": [
           null,
           null,
@@ -179,6 +158,6 @@
         ]
       }
     },
-    "timestamp": 1635585164
+    "timestamp": 1635764242
   }
 }

@@ -17,29 +17,29 @@ describe 'Tests Career Jet API library' do
   after do
     VCR.eject_cassette
   end
-describe 'Job Information' do
-  before do
-    @job_data = Jobify::CareerJet::JobMapper.new(JOB_TOKEN).get_jobs(SKILL, LOCATION)
-    @good_data = CORRECT.jobs.map do |x|
-      Jobify::Entity::Job.new(
-        date: x.date,
-        url: x.url,
-        title: x.title,
-        description: x.description,
-        company: x.company,
-        locations: x.locations
-      )
+  describe 'Job Information' do
+    before do
+      @job_data = Jobify::CareerJet::JobMapper.new(JOB_TOKEN).get_jobs(SKILL, LOCATION)
+      @good_data = CORRECT.jobs.map do |x|
+        Jobify::Entity::Job.new(
+          date: x.date,
+          url: x.url,
+          title: x.title,
+          description: x.description,
+          company: x.company,
+          locations: x.locations
+        )
+      end
+    end
+    it 'HAPPY: should return correct Job Info' do
+      (0..@good_data.size - 1).each do |i|
+        _(@job_data[i].locations).must_equal @good_data[i].locations
+        _(@job_data[i].date).must_equal @good_data[i].date
+        _(@job_data[i].company).must_equal @good_data[i].company
+        _(@job_data[i].url).must_equal @good_data[i].url
+        _(@job_data[i].title).must_equal @good_data[i].title
+        _(@job_data[i].description).must_equal @good_data[i].description
+      end
     end
   end
-  it 'HAPPY: should return correct Job Info' do
-    (0..@good_data.size - 1).each do |i|
-      _(@job_data[i].locations).must_equal @good_data[i].locations
-      _(@job_data[i].date).must_equal @good_data[i].date
-      _(@job_data[i].company).must_equal @good_data[i].company
-      _(@job_data[i].url).must_equal @good_data[i].url
-      _(@job_data[i].title).must_equal @good_data[i].title
-      _(@job_data[i].description).must_equal @good_data[i].description
-    end
-  end
-end
 end
