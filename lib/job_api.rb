@@ -18,13 +18,10 @@ module Jobify
 
   # Sends request to the Gem API
   class Request
-    # def initialize(key, skill, location, contracttype = 'none', contractperiod = 'none')
     def initialize(key, skill, location)
       @key = key
       @skill = skill
       @location = location
-      #   @contracttype = contracttype
-      #   @contractperiod = contractperiod
     end
 
     def job
@@ -37,8 +34,6 @@ module Jobify
         user_agent: 'Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0',
         url: 'http://www.example.com/jobsearch?q=ruby&l=london',
         sort: 'date'
-        # contracttype: 'p',
-        # contractperiod: 'p'
       )
     end
   end
