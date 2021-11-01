@@ -23,8 +23,8 @@ module Jobify
           routing.post do
             skill_entered = routing.params['skill'].downcase
             location_entered = routing.params['location'].downcase
-            skill = skill_entered.split(' ').join('+')
-            location = location_entered.split(' ').join('+')
+            skill = skill_entered.split.join('+')
+            location = location_entered.split.join('+')
 
             routing.halt 400 if skill.empty? || location.empty?
 
