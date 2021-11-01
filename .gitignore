@@ -1,0 +1,5 @@
+config/secrets.yml
+coverage/*
+!coverage/.resultset.json
+_snippets/
+spec/fixtures/job_results.yml
