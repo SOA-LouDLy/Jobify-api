@@ -1,0 +1,39 @@
+.container.rounded
+  .row
+    - jobs.each do |job|
+      .row
+          h4
+            span.job.title
+              = job.title
+          .col-lg-1.col-md-12.col-sm-12
+           span.job.attribute Desc
+          .col-lg-11.col-md-10.col-sm-12
+           p.job.description 
+             = job.description
+          .col-lg-1.col-md-12.col-sm-12
+            span.job.attribute Company
+          .col-lg-11.col-md-10.col-sm-12
+            p.job.company 
+              = job.company 
+          .col-lg-1.col-md-12.col-sm-12
+            span.job.attribute Date
+          .col-lg-11.col-md-10.col-sm-12
+            p.job.date 
+              = job.date 
+          .col-lg-1.col-md-12.col-sm-12
+            span.job.attribute Link
+          .col-lg-11.col-md-6.col-sm-12
+            a.job.url href="#{job.url}"
+              = "#{job.company} full link " 
+          br/
+          br/
+          .col-lg-1.col-md-12.col-sm-12
+            span.job.attribute Location
+          .col-lg-11.col-md-10.col-sm-12
+            p.job.location 
+              = job.locations 
+      hr.new
+      br/
+      br/
+    
+        
