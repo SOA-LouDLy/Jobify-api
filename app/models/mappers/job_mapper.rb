@@ -38,7 +38,7 @@ module Jobify
       end
 
       def date
-        @data.date
+        @data.date[0..15]
       end
 
       def url

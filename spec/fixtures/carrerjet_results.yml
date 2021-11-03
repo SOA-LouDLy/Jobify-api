@@ -3,255 +3,252 @@ jobs: !ruby/array:Hashie::Array
 - !ruby/hash:Careerjet::Mash
   locations: London
   site: ''
-  date: Sat, 30 Oct 2021 07:55:02 GMT
-  url: http://jobviewtrack.com/en-gb/job-191f41694812201e5454650d0f0800020052762d0714434558485f662b0b513b501069505c5e5c144d/d77cbd54b97e1b69cb04373de1020106.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: DevOps Engineer
-  description: ", Node.js, Postgres, Python, <b>Ruby</b>, Shell script.   For further
-    information, please apply for immediate review!..."
-  company: Stott & May
-  salary: ''
-- !ruby/hash:Careerjet::Mash
-  salary_min: '525'
-  locations: London
-  salary_type: D
-  date: Sat, 30 Oct 2021 07:51:53 GMT
-  description: 'Contract - <b>Ruby</b> - <b>Ruby</b> on Rails - Engineer - Developer
-    - API - AWS - Outside IR35   Title: <b>Ruby</b> Developer   Rate: £525..., Payments   Essential:   Commercial
-    experience as a <b>Ruby</b> developer  Ready to guide and support other team members
-    when...'
-  salary_currency_code: GBP
-  salary: "&pound;525 - 575 per day"
-  site: ''
-  url: http://jobviewtrack.com/en-gb/job-1b12417f5806164e63115606040e1e021722300d1f1646444d485f663d1b450d21525a5857535c/e8156bdd5d848f6b098414570e00155a.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Ruby Developer
-  salary_max: '575'
-  company: Tiro Partners
-- !ruby/hash:Careerjet::Mash
-  locations: London
-  site: ''
-  date: Sat, 30 Oct 2021 07:31:35 GMT
-  url: http://jobviewtrack.com/en-gb/job-1f13417e480a060155546a021e004e230056110406034f593f674c120e4e63115606040e1e021722270d071a45591d6948120a02480445116a320b090c4f064823125c4a3f674c120e6f1646195a5c58/07e060fdf745d12c514000abc124f3b0.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Senior Java Developer
-  description: " IR35   Java Developer/Java/RESTful/API/Python/<b>Ruby</b>/Lunix/Unix/Mac
-    OS/Automation Java Developer/Java/RESTful/API/Python/<b>Ruby</b>... of service
-    too, we'd like to recognise your recommendations with our referral scheme   Java/RESTful/API/Python/<b>Ruby</b>/Lunix/Unix..."
-  company: Concept Resourcing
+  date: Wed, 03 Nov 2021 05:40:51 GMT
+  url: http://jobviewtrack.com/en-gb/job-1248417e480a0601555464061e2e1e1445651a0f001d4f4e4f2f690119215707002606060709004506483b16474449482f370a004e1b52432d0f090e0b45111a6b374f5d725d5e442a00401d4e060d136c35004d1b1c0c536e4e4b625d176e5f154d195751/abff06899c5d9d1538d3d5004adcac08.html?affid=This_Is_A_Dummy_Key
+  title: Senior DevOps Engineer - Fully Remote
+  description: ", and managing API's  Scripting from scratch with Python, Bash, Shell,
+    Powershell, <b>Ruby</b>, Groovy etc.    Company benefits include:  15..."
+  company: Lorien
   salary: ''
 - !ruby/hash:Careerjet::Mash
   locations: London
   site: ''
-  date: Sat, 30 Oct 2021 06:59:39 GMT
-  url: http://jobviewtrack.com/en-gb/job-4c1a417e42021b19460645432c041802094f04050c1d5e0b78434a0d010b4206223304001a010a5219483a1c4c5f4a4c5f014f2b4913490d0d041c65364f121c1e12584e1d6843030600421152612c041802094f04050c1d5e0b78434a0d010b4206223007071a10045211482d165c4e51425d090a005375115151585a5e/6df7aedc7992c5004603e5bddc5b16b6.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Software Development Engineer, Video Commerce Platform | Watch and Buy
-  description: " at least one of Java, C++, C#, Objective-C, JavaScript, <b>Ruby</b>,
-    Perl and/or Python programming languages  · Evidence of working..."
-  company: Amazon
-  salary: ''
-- !ruby/hash:Careerjet::Mash
-  salary_min: '650'
-  locations: London
-  salary_type: D
-  date: Sat, 30 Oct 2021 06:18:04 GMT
-  description: My client is in the public sector and is looking for a Senior <b>Ruby</b>
-    Developer to support and build new features... of an existing <b>ruby</b> application.   You’ll
-    be joining a multidisciplinary team, they write code and operate software in specific
-    areas...
-  salary_currency_code: GBP
-  salary: "&pound;650 per day"
-  site: ''
-  url: http://jobviewtrack.com/en-gb/job-1913417e480a0601555472160a184e230056110406034f593f7e480a0601555464061e0402081545066a3b0648521d6948120a02480445116a250b11004c1b180c012879484f54655e5c1e4d145a/c3646108d039a82200f4008afaa144ad.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Senior Ruby Developer
-  salary_max: '650'
-  company: Zebra People
-- !ruby/hash:Careerjet::Mash
-  locations: London
-  site: ''
-  date: Sat, 30 Oct 2021 04:34:17 GMT
-  url: http://jobviewtrack.com/en-gb/job-1213417c6c44230b4610223229413f26676c11090d721b190414195d/a2504b76a4747b269809aefba2027667.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: QA Lead
-  description: " (JMeter, Gatling, Neoload, Webload)  The ability to develop complex
-    code in at least one of the following (Java, Python, <b>Ruby</b>..."
-  company: Ten10
+  date: Wed, 03 Nov 2021 05:40:51 GMT
+  url: http://jobviewtrack.com/en-gb/job-1a4d417f4809001a425464061e040208154506483b0648521d4243443d0f4e1853613a140c1e454f1a483b1243474e0d6901190b4b1b50061a633c12075954070753784a54415e443d0b4a1b54066a330b0a0a5411483b0648521d6948120a02480445116a330f0e0953543a0c1e455f580d6901190b4b1b50061a605f555c194051/7c9635d028fa0e0da8c5c26b74fc8c12.html?affid=This_Is_A_Dummy_Key
+  title: Ruby on Rails Developer - remote
+  description: "<b>Ruby</b> on Rails Developer required by one of Experis's key clients,
+    to join their existing team work on some new....   Now on to the skills:  Strong
+    experience using <b>Ruby</b>  Knowledge of some Front End skills such as HTML,
+    CSS, JavaScript  Familiarity..."
+  company: Experis
   salary: ''
 - !ruby/hash:Careerjet::Mash
   locations: London
   site: ''
-  date: Sat, 30 Oct 2021 02:46:34 GMT
-  url: http://jobviewtrack.com/en-gb/job-191e417e48071a1c4e0059433b181d13004d07482c1d4d42534848166d3e4f0d530a0b0002473645171d1b1a5e521d6843030600421152613b181d13004d07482c1d4d42534848166d3d4217551101151747204e130107164f593f7d451d1c0744154c433b040d121749001168421812041914/8f14da56265d1caa1021bdbc79407ad8.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Physical Security Systems Engineer
-  description: " (Lenel, RedCloud, etc.)  · 3+ years' scripting experience (PowerShell,
-    Batch, Perl, Python, <b>Ruby</b>, etc.)  · 1+ years..."
-  company: Amazon
+  date: Wed, 03 Nov 2021 05:40:51 GMT
+  url: http://jobviewtrack.com/en-gb/job-1c4e417f4809001a425472160a184e230056110406034f593f7f4809001a4254720609021a472145020d051c5a4e4f2f7f010201531100270d170b0b0a50111a6b215f49440d6901190b4b1b50061a633c02044300482d165c4e51425d011d6f1646195a5c58/4ce1eae1411d85976d4b8335353a534a.html?affid=This_Is_A_Dummy_Key
+  title: Ruby Developer (React - FULLY REMOTE)
+  description: "<b>Ruby</b> Developer (React)   Fully Remote   Competitive Salary
+    + Fantastic Benefits   A <b>Ruby</b> Developer... is required for a highly specialised
+    software development company. This <b>Ruby</b> Developer will be building, updating
+    and maintaining the companies..."
+  company: ARC IT Recruitment
   salary: ''
 - !ruby/hash:Careerjet::Mash
-  salary_min: '28000'
+  salary_min: '85000'
   locations: London
   salary_type: Y
-  date: Sat, 30 Oct 2021 02:42:16 GMT
-  description: " an updated CV to <b>Ruby</b> at Reeson education.   Reeson Education:
-    \  REESON Education is London's Premier Recruitment Agency. Established in..."
+  date: Wed, 03 Nov 2021 05:40:51 GMT
+  description: " and strong scripting skills (Powershell, Python, <b>Ruby</b>, Bash,
+    etc.)  Strong knowledge of Ansible and other configuration management tools..."
   salary_currency_code: GBP
-  salary: "&pound;28000 - 48000 per year"
+  salary: "&pound;85000 per year"
   site: ''
-  url: http://jobviewtrack.com/en-gb/job-4b1d417d5f0d020f550d00370d000d0f0052763c0c124943585f2f341d074a15521a69505c5e5c144d/e2680c901dc36aff28fd719ba9b1f91d.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Primary Teacher
-  salary_max: '48000'
-  company: Reeson Education
-- !ruby/hash:Careerjet::Mash
-  salary_min: '500'
-  locations: London
-  salary_type: D
-  date: Fri, 29 Oct 2021 07:58:03 GMT
-  description: 'Contract - <b>Ruby</b> - <b>Ruby</b> on Rails - Engineer - Developer
-    - API - AWS - Outside IR35   Title: <b>Ruby</b> Developer   Rate: up... company
-    which caters for everything luxury based in the heart of Central London. As a
-    <b>Ruby</b> Developer you will have at least 3...'
-  salary_currency_code: GBP
-  salary: "&pound;500 - 550 per day"
-  site: ''
-  url: http://jobviewtrack.com/en-gb/job-1b12417f5806164e63115606040e1e021722300d1f1646444d485f663d1b450d21525a5857535c/837dd7c83e59acaa5597d8fafac3c0d5.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Ruby Developer
-  salary_max: '550'
-  company: Tiro Partners
-- !ruby/hash:Careerjet::Mash
-  salary_min: '500'
-  locations: London
-  salary_type: D
-  date: Fri, 29 Oct 2021 07:46:59 GMT
-  description: Senior Software Engineer/Senior Software Developer/Senior <b>Ruby</b>
-    Developer  £500 - £600 per day (Outside of IR35)  6...-month Contract  London
-    - Remote   We are representing a growing SaaS organisation who are looking for
-    a <b>Ruby</b> developer...
-  salary_currency_code: GBP
-  salary: "&pound;500 - 600 per day"
-  site: ''
-  url: http://jobviewtrack.com/en-gb/job-1b12417f5806164e63115606040e1e021722300d1f1646444d485f663d1b450d21525a5857535c/ff7c0836591bbd081c45ab377b752c42.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Ruby Developer
-  salary_max: '600'
-  company: Tria Recruitment
-- !ruby/hash:Careerjet::Mash
-  locations: London
-  site: ''
-  date: Fri, 29 Oct 2021 07:26:15 GMT
-  url: http://jobviewtrack.com/en-gb/job-4e19416b5f0b011a07314e076a271b0b0900271c081041297f4c4e0f4f2b491022270d170b0b0a50190d0707286d484141655e5c1e4d145a/f0f3c717e59ea2bd2308702d68e2bf07.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Full Stack (Front + Back End) Development
-  description: " with Server Side languages such as Python, <b>Ruby</b>, Java, PHP
-    and .Net  Experience writing unit tests and integration tests..."
-  company: eTeam Inc.
-  salary: ''
-- !ruby/hash:Careerjet::Mash
-  locations: London
-  site: ''
-  date: Fri, 29 Oct 2021 07:19:55 GMT
-  url: http://jobviewtrack.com/en-gb/job-1f1841785d441b0125314e04010f0b0217223607070659297f4843010907530721525a5857535c/900f599e7a83c23d8653fbb013cf378a.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: GCP - API Engineer - Up to £90 K + 10% Bonus + Benefits
-  description: " specs  Two of the following programming languages: Python, Scala,
-    Java, Go, <b>Ruby</b>, NodeJS, JavaScript, Lua, Golang..."
-  company: McCabe & Barton
-  salary: ''
-- !ruby/hash:Careerjet::Mash
-  salary_min: '30000'
-  locations: London
-  salary_type: Y
-  date: Fri, 29 Oct 2021 07:08:50 GMT
-  description: 'Title: Junior Developer (JavaScript, React.js & <b>Ruby</b>)  Salary:
-    £30-35K + benefits  Location: East London, working... yourself outside your comfort
-    zone through learning new languages (JavaScript, <b>Ruby</b>) and being happy
-    liaising with senior members...'
-  salary_currency_code: GBP
-  salary: "&pound;30000 - 35000 per year"
-  site: ''
-  url: http://jobviewtrack.com/en-gb/job-181a4167580a060155546a021e003d041749041c49374f5d584142140a1c253e550d010e1c473755161149374f5d584142140a1c253e550d010e1c473745150b1d536e4e4b48410b1f0b55766a16060801154564111e0c1f455b585f2f2e0e184627431101111a472145020d051c5a4e4f2c1c565657134d/ab11caf30af76ec10927f2a763b20064.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Junior Developer - JavaScript, React.js & Ruby
-  salary_max: '35000'
-  company: Oliver Bernard
-- !ruby/hash:Careerjet::Mash
-  locations: Central London
-  site: ''
-  date: Fri, 29 Oct 2021 07:03:18 GMT
-  url: http://jobviewtrack.com/en-gb/job-194f416342000a04545464061e0402081545066a2d165c4e51425d011d6c691b440602126f565318/8468e5bc374bf812f6475a0a15291dde.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: NodeJS Developer
-  description: " Engineer, React.JS Growth Javascript CSS HTML Frontend <b>Ruby</b>,
-    Java, <b>Ruby</b> on Rails, CSS, HTML5, Linux REST, Javascript..."
-  company: Quant Capital
-  salary: ''
-- !ruby/hash:Careerjet::Mash
-  locations: London
-  site: ''
-  date: Fri, 29 Oct 2021 07:00:08 GMT
-  url: http://jobviewtrack.com/en-gb/job-4e1e416b5808034e7400410003412a0213451807191658297b5841084f3d531543086a321a06064b542c0c054f47525d48166d2a4202450f07110b156766010405721b190414195d/1c52108fb0d8e309fbbb1cf3182c340c.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Full Stack Developer
-  description: " Front End languages such as HTML, CSS and JavaScript   . Proficiency
-    with Server Side languages such as Python, <b>Ruby</b>, Java..."
-  company: SidTech
-  salary: ''
-- !ruby/hash:Careerjet::Mash
-  salary_min: '70000'
-  locations: London
-  salary_type: Y
-  date: Fri, 29 Oct 2021 06:30:53 GMT
-  description: " successful sports data company that provide statistical information
-    on a range of sports (e.g. Cricket, Tennis, <b>Ruby</b> and Football..."
-  salary_currency_code: GBP
-  salary: "&pound;70000 per year"
-  site: ''
-  url: http://jobviewtrack.com/en-gb/job-1a494161440a1a160735440e010f07141152151c0601286f5c594c060e1d425461070508000e165406091d1c582971444311176c66104d0a06081d13174100071b716e4a494c4f051c0b2645125a515557/aaf3afb452454b0a19cf44020a0f0ac5.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Database Administrator / Linux SysAdmin
-  salary_max: '70000'
-  company: Client Server
+  url: http://jobviewtrack.com/en-gb/job-1d49417e480a06015554731a1b150b0a160031060e1a444e585f2f37161d53114d10482400000c4e110d1b716c42534c4307060f4b5473061a1707040053763b0c1d43444f0d680a0807491145116a320b090c4f06482f1a444a534e4405036f1646195a5c58/05854e10c0c9f0c17006d93d39c002b8.html?affid=This_Is_A_Dummy_Key
+  title: Senior Systems Engineer (MS Defender) - Financial Services - London - Up
+    to £85k + Benefits
+  salary_max: '85000'
+  company: Computappoint
 - !ruby/hash:Careerjet::Mash
   salary_min: '90000'
   locations: London
   salary_type: Y
-  date: Fri, 29 Oct 2021 06:12:26 GMT
-  description: ", Python, <b>Ruby</b>, Go, Groovy.  Extensive eperience using public
-    cloud platforms (AWS / Azure)  Demonstrable experience using the..."
+  date: Wed, 03 Nov 2021 04:29:24 GMT
+  description: " development experience - likely to have a background with Java, Python
+    or <b>Ruby</b>  *You have a strong knowledge of JavaScript..."
   salary_currency_code: GBP
   salary: "&pound;90000 per year"
   site: ''
-  url: http://jobviewtrack.com/en-gb/job-1c1e417d41051b0848064d432d0f090e0b45111a6b36444c544348011d6c771841170e0e1c0a64114651504713/857de00847c9944461e8de025b61c11f.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Platform Engineer
+  url: http://jobviewtrack.com/en-gb/job-1b1e41674c120e3d440649131c412812094c543b1d1249401d6948120a02480445116a271b0b0900271c0810410b79485b010301571152612e14020b457300090a180a79584042100a6c75114d0c1c044e2d0456153b0a01435b490d6901190b4b1b50061a633c02084f000d49374f5d584142140a1c2645125a515557/debb7497172d527f9ad65b47560f49c2.html?affid=This_Is_A_Dummy_Key
+  title: Full Stack Developer Kotlin JavaScript - Remote
   salary_max: '90000'
-  company: Anson McCade
+  company: Client Server
 - !ruby/hash:Careerjet::Mash
   locations: London
   site: ''
-  date: Fri, 29 Oct 2021 06:06:40 GMT
-  url: http://jobviewtrack.com/en-gb/job-194e417e54171b0b4a0700270d170b0b0a50190d07070a6e534a440a0a0b5576731a1b150b0a160031060e1a444e585f2f200a1842184f130504001345651a0f001d4f4e4f2f680a0807491145116a250b11004c1b180416445f3c1c1f5d565a1e/05a73d34a975d48a5cf982bbcc8bf04f.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Systems Development Engineer
-  description: " QUALIFICATIONS   · 3+ years of Linux experience  · 3+ years of development
-    experience in Python, Go, <b>Ruby</b>, or related languages.  · 3... experience
-    \ · 5+ years of development experience in Python, Go, <b>Ruby</b>, or related
-    languages.  · 5+ years of multithreaded..."
-  company: Amazon
+  date: Wed, 03 Nov 2021 00:22:23 GMT
+  url: http://jobviewtrack.com/en-gb/job-1b13417e44100a4e75114c0a0903070b0c540d482c1d4d42534848166d3d4e0045432d0f090e0b45111a6b214f47544c4f0d0307530d0026060607090045066a2824790b69485f160e0848064d6129363d47204e130107164f593c1c1f5d565a1e/817576fecdb2ba9b24a9b3a1704243a2.html?affid=This_Is_A_Dummy_Key
+  title: Site Reliability Engineer - (Concourse / AWS /Terraform /Kubernetes)
+  description: " with at least one programming language such as <b>Ruby</b>, Java,
+    Python, Javascript, Go  Are experienced with AWS and the use of orchestration
+    tools..."
+  company: Jumar Solutions
   salary: ''
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Tue, 02 Nov 2021 23:38:41 GMT
+  url: http://jobviewtrack.com/en-gb/job-1e1a417e480a06015554730c0e1519061745542d0714434558485f663c01410057021a044e23005611040603474e53590d2101094e1a45061a633d020b491b1a49374f5d58414214020b49000026060607090045066a3b16474449480d370008530341110d412b0902491a0d0c012878524b59130e1c4254650d0f080002005275595b4a131f04/62c37e15e05269b20579825a375d67bb.html?affid=This_Is_A_Dummy_Key
+  title: Senior Software Engineer, Shop – Backend Development (Remote, Europe)
+  description: " within seconds – a difficult but incredibly rewarding responsibility.
+    We rely heavily on <b>Ruby</b> on Rails within Shop, and we're a big... languages
+    — <b>Ruby</b> on Rails, GraphQL, Python, Go — is an asset, but not required. Don’t
+    have experience with many of them? No..."
+  company: Shop
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Tue, 02 Nov 2021 23:22:57 GMT
+  url: http://jobviewtrack.com/en-gb/job-1a4f417e42021b19460645432d0f090e0b45111a001d4d0b704c4305080b55767206050e1a0245731b0e1d044b59580d6005010f401152612d0f090e0b45111a001d4d0b704c4305080b5576730c0e15190617455425081d4b4c585f2f360a03480045433b0e08131241060d68421812041914/0aaa7951ca2772bcd964da4c0b64f79a.html?affid=This_Is_A_Dummy_Key
+  title: Software Engineering Manager (Remote, Europe)
+  description: " but incredibly rewarding responsibility. Shopify is the largest <b>Ruby</b>
+    on Rails application in the world and we're a big part of the... a maintainable
+    and scalable way. Our teams primarily work with the latest web standards in HTML,
+    CSS, JavaScript, React, and <b>Ruby</b>..."
+  company: Shopify
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  salary_min: '600'
+  locations: London
+  salary_type: D
+  date: Tue, 02 Nov 2021 23:17:45 GMT
+  description: "<b>Ruby</b> Developer required to work with a Government department.
+    This is an initial 6-month contract, paying £650 a day...).   Main Responsibilities:
+    \ *To work with the digital and technology team to further develop the online/browser
+    application through <b>Ruby</b>..."
+  salary_currency_code: GBP
+  salary: "&pound;600 - 650 per day"
+  site: ''
+  url: http://jobviewtrack.com/en-gb/job-1b12417f5806164e63115606040e1e021722300d1f1646444d485f663d1b450d21525a5857535c/69e3ce12852ed314b20fa2f3741a26c6.html?affid=This_Is_A_Dummy_Key
+  title: Ruby Developer
+  salary_max: '650'
+  company: Badenoch + Clark
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Tue, 02 Nov 2021 23:09:05 GMT
+  url: http://jobviewtrack.com/en-gb/job-4948417e480a06015554730c0e1519061745542d0714434558485f663c0b491d4f11482800011741071c1b06495f485f48442a00401d4e060d136c35004d1b1c0c5379445b595a051d0b07314e04010f0b02172227070f075d4a4f480d2101094e1a45061a6327090352151b1d015f4849585f014f2b4913490d0d041c6654124d515d4a/447b77d20812da84aa2b256388866a4d.html?affid=This_Is_A_Dummy_Key
+  title: Senior Software Engineer – Backend or Infrastructure (Remote, Europe)
+  description: " of entrepreneurs will see your work within seconds – a difficult
+    but incredibly rewarding responsibility. Shopify is the largest <b>Ruby</b>...
+    on and our 1 million merchants to depend on. Some of the technology that the team
+    uses: <b>Ruby</b>, Rails, Go, Kubernetes, MySQL, Redis..."
+  company: Shopify
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Tue, 02 Nov 2021 23:05:57 GMT
+  url: http://jobviewtrack.com/en-gb/job-4c1c416c57111d0b07274f0f1d1507080b00351a0a1b435f584e59663c014b01540a070f4e2617431c011d16495f3f6c57111d0b0735520000081a02065476291b10424249484e106d2f5d01520669505c5e5c144d/213195cc8cf8b57c1de4291ad2395083.html?affid=This_Is_A_Dummy_Key
+  title: 'Solution Architect Modernization : Azure'
+  description: ", Azure, GCP with the highest focus on Azure  Experience coding in
+    Java, Python, <b>Ruby</b>, Go, and JavaScript frameworks..."
+  company: IBM
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Tue, 02 Nov 2021 23:04:15 GMT
+  url: http://jobviewtrack.com/en-gb/job-4e1e416b5808034e7400410003412a0213451807191658297b5841084f3d531543086a321a06064b542c0c054f47525d48166d2a4202450f07110b156766010405721b190414195d/fc5542a76bcd2e51b2c5b9cb60b9d285.html?affid=This_Is_A_Dummy_Key
+  title: Full Stack Developer
+  description: " and JavaScript  · Proficiency with server side languages such as
+    Python, <b>Ruby</b>, Java, PHP and .Net  · Experience writing unit tests..."
+  company: BCT Resourcing
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  salary_min: '40000'
+  locations: Sheffield - London
+  salary_type: Y
+  date: Tue, 02 Nov 2021 03:48:13 GMT
+  description: "  Have worked as a senior software engineer or technical lead, primarily
+    working with <b>Ruby</b> on Rails  Have designed websites..."
+  salary_currency_code: GBP
+  salary: "&pound;40000 per year"
+  site: ''
+  url: http://jobviewtrack.com/en-gb/job-184d4179480707004e17410f482d0b060122200d0a1b44425e4c41663f015500410f6a2d0b060121455d5d42181c3f1c1f5d565a1e/5420f791e66748fd17298c6231cc2cf4.html?affid=This_Is_A_Dummy_Key
+  title: Web Portal Technical Lead
+  salary_max: '40000'
+  company: BCT Resourcing
+- !ruby/hash:Careerjet::Mash
+  salary_min: '90000'
+  locations: London
+  salary_type: Y
+  date: Mon, 01 Nov 2021 07:37:07 GMT
+  description: " least one modern programming language C#/Java/JavaScript/Python/Go/<b>Ruby</b>
+    etc  oUnderstanding of Scripting languages, PowerShell/Bash..."
+  salary_currency_code: GBP
+  salary: "&pound;90000 - 110000 per year"
+  site: ''
+  url: http://jobviewtrack.com/en-gb/job-121e416c57111d0b07274f0f1d1507080b00351a0a1b435f584e5966220744064f1007071a47364f181d1d1a45451d6c5f070707531143176a2c0704174f07070f070a6a47585f016d3d48185517010e00472452170000074f48492f600d0c1c48074f051c412f1506481d1c0c105e2a0c1f145d5b57/8560ecb03ad96a1f695d4da82f2d6fc1.html?affid=This_Is_A_Dummy_Key
+  title: Microsoft Azure Solution Architect
+  salary_max: '110000'
+  company: Deerfoot IT Resources
 - !ruby/hash:Careerjet::Mash
   salary_min: '65000'
   locations: London
   salary_type: Y
-  date: Fri, 29 Oct 2021 05:20:38 GMT
+  date: Sun, 31 Oct 2021 22:12:32 GMT
   description: "<b>Ruby</b> on Rails Developer (Temporarily remote, until they return
-    back to the office)   London   £65,000 - £70,000 p... company.   Tasks   I am
-    currently looking for a experienced Senior <b>Ruby</b> on Rails Developer to join
-    my clients busy tech team..."
+    back to the office)  Location : London  Salary... and join a fantastic company.
+    \  Tasks   I am currently looking for an experienced Senior <b>Ruby</b> on Rails
+    Developer to join my client's busy..."
   salary_currency_code: GBP
-  salary: "&pound;65000 - 70000 per year"
+  salary: "&pound;65000 - 75000 per year"
   site: ''
-  url: http://jobviewtrack.com/en-gb/job-4e1f417f5806164e481a0031090802144564111e0c1f455b585f2f370a004e1b52433a140c1e4564111e0c1f455b585f2f361a0c5e547202010d1d6536451a0106010a6f585b4808001e420622311d0317472145020d051c5a4e4f2c1c565657134d/ffe5ab2abf0b54fb468742bae7695fc8.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: Senior/Mid Ruby on rails Developer
-  salary_max: '70000'
-  company: Pertemps Network
+  url: http://jobviewtrack.com/en-gb/job-1b1c417f5806164e481a0031090802144564111e0c1f455b585f2f361a0c5e547202010d1d653755161149374f5d584142140a1c2526410a04124e230056110406034f593f6948120a024804451169505c5e5c144d/fb2df15acff14d8066411b7a10000346.html?affid=This_Is_A_Dummy_Key
+  title: Ruby on Rails Developer
+  salary_max: '75000'
+  company: Pertemps
 - !ruby/hash:Careerjet::Mash
-  locations: Central London
+  locations: London - Berlin
   site: ''
-  date: Fri, 29 Oct 2021 02:53:49 GMT
-  url: http://jobviewtrack.com/en-gb/job-124f417c6c442a00401d4e060d134e34004c11060006470b774c5b056d3f665473060404000e104d542d0714434558485f66250f51150026060607090045066a38320a6e534a440a0a0b557673060404000e104d542208054b2a0c1b15/b31256cc094517ee9f1c6777009e2cd9.html?affid=5d1c7d2cf53d142f9e36c9ad2148a51c
-  title: QA Engineer - Fintech Selenium Java
-  description: ", Java Engineer, Java Developer, React.JS Growth Javascript CSS HTML
-    Frontend <b>Ruby</b>, Java, <b>Ruby</b> on Rails, CSS, HTML5, Linux..."
-  company: Quant Capital
+  date: Sun, 31 Oct 2021 22:10:58 GMT
+  url: http://jobviewtrack.com/en-gb/job-181e412c1c565657134d22565b585a5f/60bfb8157c67ecbee698cdd5b19d89a8.html?affid=This_Is_A_Dummy_Key
+  title: Full Stack Developer
+  description: " of Javascript  Good knowledge of SQL  Experience in developing in
+    NodeJS, <b>Ruby</b> on Rails or Java (or similar)  Experience..."
+  company: Atheneum Partners
   salary: ''
-hits: 504
-response_time: 0.0544719696044922
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Sun, 31 Oct 2021 07:55:36 GMT
+  url: http://jobviewtrack.com/en-gb/job-4e1341694c100e4e7411521501020b1445651a0f001d4f4e4f2f69051b0f07314e04010f0b02172230091d120a78585f5b0d0c0b5476650d0f0800020052762c08074b2a0c1f145d5b57/684d9ce7094be9121967cdc68a37a618.html?affid=This_Is_A_Dummy_Key
+  title: Data Services Engineer
+  description: " using Azure/AWS/GCP (Docker/Kubernetes)  Experience in developing
+    software using languages such as Java, Python, C++ or <b>Ruby</b>..."
+  company: NP Group
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  locations: London
+  site: ''
+  date: Sun, 31 Oct 2021 07:51:38 GMT
+  url: http://jobviewtrack.com/en-gb/job-4b1b416b5808034e74004100034124061341542c0c054f47525d48166d2852184c433b150f040e00300d1f1646444d485f66250f511500270d170b0b0a50111a6b355f47510d7e100e0d4c767317090205472145020d051c5a4e4f2c1c565657134d/af602bc025687ed44bb7cbaf892bce07.html?affid=This_Is_A_Dummy_Key
+  title: Full Stack Java Developer
+  description: " and JavaScript  Proficiency with Server Side languages such as Python,
+    <b>Ruby</b>, Java, PHP and .Net  Experience writing unit tests..."
+  company: SR Software Solutions Limited
+  salary: ''
+- !ruby/hash:Careerjet::Mash
+  salary_min: '85000'
+  locations: London
+  salary_type: Y
+  date: Sun, 31 Oct 2021 07:44:28 GMT
+  description: "/REST/JSON  MSBuild & Scripting eg PowerShell, CS Script, <b>Ruby</b>,
+    etc  Architectural patterns such as SOA, GraphQL..."
+  salary_currency_code: GBP
+  salary: "&pound;85000 per year"
+  site: ''
+  url: http://jobviewtrack.com/en-gb/job-1f1a417d5f0d010d4e04410f482400000c4e110d1b71690b78434a0d010b42062226060607090045066a390143455e445d05036f1646195a5c58/67d2a7effc2e74867acc3767766df80e.html?affid=This_Is_A_Dummy_Key
+  title: Principal Engineer (C#)
+  salary_max: '85000'
+  company: PSD Technology Contracts Ltd.
+- !ruby/hash:Careerjet::Mash
+  salary_min: '100000'
+  locations: London
+  salary_type: Y
+  date: Sun, 31 Oct 2021 07:28:45 GMT
+  description: " Engineers.   The application technology stack is fairly diverse within
+    this business and includes <b>Ruby</b>, Python, PHP, Java..."
+  salary_currency_code: GBP
+  salary: "&pound;100000 per year"
+  site: ''
+  url: http://jobviewtrack.com/en-gb/job-4913416148050b4e6311562c18124e220b471d060c16582971484c004f2b4913490d0d041c652145022719000a6e534a440a0a0b5576650d0f080002005276240c124e2a0c1f145d5b57/beb4f29bb3a72abeefed1af2587b21c6.html?affid=This_Is_A_Dummy_Key
+  title: Lead DevOps Engineer
+  salary_max: '100000'
+  company: Spencer Scott
+hits: 500
+response_time: 0.0333549976348877
 type: JOBS
-pages: 26
+pages: 25

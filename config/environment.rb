@@ -6,7 +6,7 @@ require 'yaml'
 module Jobify
   # Configuration for the App
   class App < Roda
-    CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
+    CONFIG = YAML.safe_load(File.read('config/secrets_example.yml'))
     JOB_TOKEN = CONFIG['API_KEY']
   end
 end
