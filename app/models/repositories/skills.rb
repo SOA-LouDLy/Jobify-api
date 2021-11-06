@@ -8,14 +8,14 @@ module Jobify
         rebuild_entity Database::SkillOrm.first(id: id)
       end
 
-      def self.find_name(name)
-        rebuild_entity Database::SKillOrm.first(name: name)
+      def self.find_name(title)
+        rebuild_entity Database::SKillOrm.first(title: title)
       end
 
-      def self.find_all(name)
+      def self.find_all(title)
         skill_database = Database::SkillOrm
                          .left_join(:jobs, id: :skill_id)
-                         .where(name: name)
+                         .where(title: title)
                          .first
         rebuild_entity(skill_database)
       end
