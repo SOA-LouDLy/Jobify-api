@@ -10,7 +10,7 @@ module Jobify
     plugin :assets, css: 'style.css', path: 'app/views/assets'
     plugin :halt
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
 
       # GET /
@@ -28,6 +28,15 @@ module Jobify
 
             routing.halt 400 if skill.empty? || location.empty?
 
+            # Get job from CareerJet
+            jobs = CareerJet::JobMapper
+                   .new(App.config.JOB_TOKEN)
+                   .get_jobs(skill, location)
+
+            # Add jobs to database
+            Repository::For.entity(jobs).create(jobs)
+
+            # Redirect users to the jobs Page
             routing.redirect "jobs/#{skill}/#{location}"
           end
         end
@@ -35,10 +44,11 @@ module Jobify
         routing.on String, String do |skill, location|
           # GET /job/skill/location
           routing.get do
-            careerjet_jobs = CareerJet::JobMapper
-                             .new(JOB_TOKEN)
-                             .get_jobs(skill, location)
-            view 'error' if careerjet_jobs.nil?
+            # careerjet_jobs = CareerJet::JobMapper
+            #                  .new(JOB_TOKEN)
+            #                  .get_jobs(skill, location)
+            careerjet_jobs = Repository::For.klass(Entity::Job)
+                                            .find_url(skill, location)
             view 'job', locals: { jobs: careerjet_jobs } unless careerjet_jobs.nil?
           end
         end
