@@ -10,11 +10,6 @@ module Jobify
         @gateway = @gateway_class.new(@key)
       end
 
-      def get_jobs(skill, location)
-        data = @gateway.job(skill, location)
-        data.jobs.map { |job| build_entity(job) }
-      end
-
       def build_entity(data)
         DataMapper.new(data).build_entity
       end
@@ -28,6 +23,7 @@ module Jobify
 
       def build_entity
         Jobify::Entity::Job.new(
+          id: nil,
           date: date,
           url: url,
           title: title,

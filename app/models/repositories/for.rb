@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 require_relative 'jobs'
-require_relative 'links'
+require_relative 'list_jobs'
 
 module Jobify
   module Repository
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::Job => Jobs,
-        Entity::Link => Links
+        Entity::Job     => Jobs,
+        Entity::ListJob => ListJobs
       }.freeze
 
       def self.klass(entity_klass)

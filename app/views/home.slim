@@ -29,3 +29,14 @@
         } Show Job 
     .row
       .col-md-12.blank-row
+     - if jobs.any?
+      table class="table table-hover" id="jobs_table"
+        thead
+          tr
+            th Url
+        tbody 
+          - jobs.each do |job|
+            tr class="table-row job_row"
+              td
+                a.job.url href="#{job.url}"
+                  = "#{job.company} full link " 

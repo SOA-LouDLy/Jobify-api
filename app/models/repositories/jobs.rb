@@ -8,15 +8,13 @@ module Jobify
         Database::JobOrm.all.map { |db_job| rebuild_entity(db_job) }
       end
 
-      def self.find_url(title, location)
-        # SELECT * FROM `jobs` LEFT JOIN `links`
-        # ON (`links`.`id` = `jobs`.`link_id`)
-        # WHERE ((`title` = 'tile') AND (`locations` = 'location'))
-        db_job = Database::JobOrm
-                 .left_join(:links, id: :link_id)
-                 .where(title: title, locations: location)
-                 .first
-        rebuild_entity(db_project)
+      def self.find(entity)
+        finding(entity.title)
+      end
+
+      def self.finding(title)
+        db_job = Database::JobOrm.first(title: title)
+        rebuild_entity(db_job)
       end
 
       def self.find_id(id)
@@ -24,18 +22,24 @@ module Jobify
         rebuild_entity(db_job)
       end
 
-      def self.rebuild_entity(db_job)
-        return nil unless db_job
+      def self.rebuild_entity(db_record)
+        return nil unless db_record
 
         Entity::Job.new(
-          id: db_job.id,
-          title: db_job.title,
-          date: db_job.date,
-          description: db_job.description,
-          company: db_job.company,
-          locations: db_job.locations,
-          url: db_job.url
+          id: nil,
+          title: db_record.title,
+          date: db_record.date,
+          description: db_record.description,
+          company: db_record.company,
+          locations: db_record.locations,
+          url: db_record.url
         )
+      end
+
+      def self.rebuild_many(db_records)
+        db_records.map do |db_job|
+          Jobs.rebuild_entity(db_job)
+        end
       end
     end
   end
