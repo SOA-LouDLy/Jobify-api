@@ -29,7 +29,7 @@ module Jobify
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        record = db_record[0]
+        db_record.map do |record|
         Entity::Job.new(
           id: nil,
           title: record[:title],
@@ -39,6 +39,7 @@ module Jobify
           locations: record[:locations],
           url: record[:url]
         )
+        end
       end
 
       # Helper class to persist jobs a

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/config/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/config/environment.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -54,7 +54,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/init.rb": {
         "lines": [
           null,
           null,
@@ -63,7 +63,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/init.rb": {
         "lines": [
           null,
           null,
@@ -75,7 +75,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/entities/job.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/job.rb": {
         "lines": [
           null,
           null,
@@ -103,7 +103,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/entities/list_job.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/list_job.rb": {
         "lines": [
           null,
           null,
@@ -128,7 +128,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/mappers/job_mapper.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/job_mapper.rb": {
         "lines": [
           null,
           null,
@@ -198,7 +198,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/mappers/list_job_mapper.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/list_job_mapper.rb": {
         "lines": [
           null,
           null,
@@ -248,7 +248,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/repositories/for.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -276,7 +276,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/repositories/jobs.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/jobs.rb": {
         "lines": [
           null,
           null,
@@ -326,7 +326,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/repositories/list_jobs.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/list_jobs.rb": {
         "lines": [
           null,
           null,
@@ -360,7 +360,8 @@
           1,
           null,
           1,
-          1,
+          20,
+          null,
           null,
           null,
           null,
@@ -390,7 +391,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/models/repositories/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/init.rb": {
         "lines": [
           null,
           null,
@@ -399,7 +400,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
@@ -409,7 +410,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/gateways_careerjet/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/gateways_careerjet/init.rb": {
         "lines": [
           null,
           null,
@@ -418,7 +419,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/gateways_careerjet/job_api.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/gateways_careerjet/job_api.rb": {
         "lines": [
           null,
           null,
@@ -462,7 +463,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/database/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/init.rb": {
         "lines": [
           null,
           null,
@@ -472,7 +473,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/database/orms/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/init.rb": {
         "lines": [
           null,
           null,
@@ -481,7 +482,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/database/orms/job_orm.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/job_orm.rb": {
         "lines": [
           null,
           null,
@@ -501,7 +502,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/infrastructure/database/orms/list_job_orm.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/list_job_orm.rb": {
         "lines": [
           null,
           null,
@@ -520,7 +521,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/controllers/init.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/controllers/init.rb": {
         "lines": [
           null,
           null,
@@ -529,7 +530,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/app/controllers/app.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -583,7 +584,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/spec/helpers/vcr_helper.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -621,7 +622,7 @@
           null
         ]
       },
-      "/Users/danielthierrymarcelin/Documents/School Related 😎/NYCU-related/3rd Semester/SOA/Jobify/spec/helpers/database_helper.rb": {
+      "/Users/loudwigeodice/Desktop/Jobify/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -638,6 +639,6 @@
         ]
       }
     },
-    "timestamp": 1636454139
+    "timestamp": 1636497516
   }
 }
