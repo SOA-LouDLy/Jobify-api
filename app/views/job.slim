@@ -1,6 +1,9 @@
 .container.rounded
   .row
-    - jobs.each do |job|
+    - if jobs.nil?
+      h4 
+        No jobs found
+    - jobs.jobs.each do |job|
       .row
           h4
             span.job.title

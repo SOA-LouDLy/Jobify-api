@@ -28,6 +28,7 @@ module Jobify
 
       def build_entity
         Jobify::Entity::Job.new(
+          id: nil,
           date: date,
           url: url,
           title: title,

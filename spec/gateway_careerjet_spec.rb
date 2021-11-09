@@ -22,6 +22,7 @@ describe 'Tests Career Jet API library' do
       @job_data = Jobify::CareerJet::JobMapper.new(JOB_TOKEN).get_jobs(SKILL, LOCATION)
       @good_data = CORRECT.jobs.map do |x|
         Jobify::Entity::Job.new(
+          id: nil,
           date: x.date[0..15],
           url: x.url,
           title: x.title,

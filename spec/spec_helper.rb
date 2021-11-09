@@ -14,8 +14,8 @@ require_relative '../init'
 
 SKILL = 'ruby'
 LOCATION = 'london'
-CONFIG = YAML.safe_load(File.read('config/secrets_example.yml'))
-JOB_TOKEN = CONFIG['API_KEY']
+# CONFIG = YAML.safe_load(File.read('config/secrets_example.yml'))
+JOB_TOKEN = Jobify::App.config.API_KEY
 CORRECT = YAML.safe_load(File.read('spec/fixtures/carrerjet_results.yml'),
                          permitted_classes: [Careerjet::Mash, Hashie::Array])
 
