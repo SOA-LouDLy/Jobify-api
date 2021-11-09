@@ -8,7 +8,7 @@ module Jobify
   module Entity
     # ListJob Entity
     class ListJob < Dry::Struct
-      include Dry.types
+      include Dry.Types
       
       attribute :id, Integer.optional
       attribute :jobs, Strict::Array.of(Job)
