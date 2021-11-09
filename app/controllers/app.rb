@@ -16,7 +16,7 @@ module Jobify
       # GET /
       routing.root do
         jobs = Repository::For.klass(Entity::Job).all
-        view 'home', locals: {jobs: jobs}
+        view 'home', locals: { jobs: jobs }
       end
       routing.on 'jobs' do
         routing.is do
@@ -37,9 +37,9 @@ module Jobify
           # GET /job/skill/location
           routing.get do
             careerjet_jobs = CareerJet::ListJobMapper
-                             .new(App.config.API_KEY)
-                             .get_jobs(skill, location)
-            #view 'error' if careerjet_jobs.nil?
+              .new(App.config.API_KEY)
+              .get_jobs(skill, location)
+            # view 'error' if careerjet_jobs.nil?
             Repository::For.entity(careerjet_jobs).create(careerjet_jobs)
             view 'job', locals: { jobs: careerjet_jobs } unless careerjet_jobs.nil?
           end

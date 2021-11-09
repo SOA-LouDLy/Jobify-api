@@ -9,12 +9,12 @@ module Jobify
     # ListJob Entity
     class ListJob < Dry::Struct
       include Dry.Types
-      
+
       attribute :id, Integer.optional
       attribute :jobs, Strict::Array.of(Job)
 
       def to_attr_hash
-        to_hash.reject {|key, _| [:id].include? key}
+        to_hash.reject { |key, _| [:id].include? key }
       end
     end
   end

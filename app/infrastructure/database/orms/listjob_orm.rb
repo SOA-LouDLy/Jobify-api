@@ -8,7 +8,7 @@ module Jobify
     class UrlOrm < Sequel::Model(:list_jobs)
       many_to_one :job,
                   class: :'CodePraise::Database::JobOrm'
-                
+
       plugin :timestamps, update_on_create: true
     end
   end

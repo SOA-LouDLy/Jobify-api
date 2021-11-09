@@ -5,8 +5,8 @@ require 'webmock'
 
 # Setting up VCR
 module VcrHelper
-  CASSETTES_FOLDER = 'spec/fixtures/cassettes'.freeze
-  JOB_CASSETTE = 'job_api'.freeze
+  CASSETTES_FOLDER = 'spec/fixtures/cassettes'
+  JOB_CASSETTE = 'job_api'
 
   def self.setup_vcr
     VCR.configure do |c|
@@ -22,7 +22,7 @@ module VcrHelper
     end
 
     VCR.insert_cassette(
-        JOB_CASSETTE,
+      JOB_CASSETTE,
       record: :new_episodes,
       match_requests_on: %i[method uri headers]
     )
