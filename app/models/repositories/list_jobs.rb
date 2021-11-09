@@ -51,8 +51,7 @@ module Jobify
           jobs = @entity.to_hash[:jobs]
           # Database::JobOrm.create(@entity.to_attr_hash)
           jobs.map do |job|
-            #   # Database::JobOrm.create(job.reject { |key, _| [:id].include? key })
-            Database::JobOrm.create(job.to_attr_hash)
+            Database::JobOrm.create(job.reject { |key, _| [:id].include? key })
           end
         end
       end

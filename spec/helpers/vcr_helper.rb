@@ -17,8 +17,8 @@ module VcrHelper
 
   def self.configure_vcr_for_job
     VCR.configure do |c|
-      c.filter_sensitive_data('<API_KEY>') { API_KEY }
-      c.filter_sensitive_data('<API_KEY_ESC>') { CGI.escape(API_KEY) }
+      c.filter_sensitive_data('<API_KEY>') { JOB_TOKEN }
+      c.filter_sensitive_data('<API_KEY_ESC>') { CGI.escape(JOB_TOKEN) }
     end
 
     VCR.insert_cassette(

@@ -21,7 +21,7 @@ describe 'Integration Tests of CareerJet API and Database' do
     end
 
     it 'HAPPY: should be able to save project from CareerJet to database' do
-      @job_data = Jobify::CareerJet::JobMapper.new(JOB_TOKEN).get_jobs(SKILL, LOCATION)
+      @job_data = Jobify::CareerJet::ListJobMapper.new(JOB_TOKEN).get_jobs(SKILL, LOCATION)
 
       @rebuilt = Jobify::Repository::For.entity(@job_data).create(@job_data)
 

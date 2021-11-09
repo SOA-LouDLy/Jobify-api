@@ -6,7 +6,7 @@ module Jobify
   module Database
     # Object Relational Mapper for Job Entities
     class JobOrm < Sequel::Model(:jobs)
-      one_to_many :listed_job,
+      many_to_one :list_job,
                   class: :'Jobify::Database::ListJobOrm',
                   key: :job_id
 
