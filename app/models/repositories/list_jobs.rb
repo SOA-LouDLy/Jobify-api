@@ -30,14 +30,14 @@ module Jobify
         return nil unless db_record
 
         db_record.map do |record|
-        Entity::Job.new(
-          id: nil,
-          title: record[:title],
-          date: record[:date],
-          description: record[:description],
-          company: record[:company],
-          locations: record[:locations],
-          url: record[:url]
+          Entity::Job.new(
+            id: nil,
+            title: record[:title],
+            date: record[:date],
+            description: record[:description],
+            company: record[:company],
+            locations: record[:locations],
+            url: record[:url]
         )
         end
       end
