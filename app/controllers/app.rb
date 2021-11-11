@@ -39,7 +39,6 @@ module Jobify
             careerjet_jobs = CareerJet::ListJobMapper
               .new(App.config.API_KEY)
               .get_jobs(skill, location)
-            # view 'error' if careerjet_jobs.nil?
             Repository::For.entity(careerjet_jobs).create(careerjet_jobs)
             view 'job', locals: { jobs: careerjet_jobs } unless careerjet_jobs.nil?
           end
