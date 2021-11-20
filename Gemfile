@@ -54,3 +54,5 @@ gem 'careerjet-api-client'
 
 # HTTP posts
 gem 'httmultiparty'
+
+gem 'curb'

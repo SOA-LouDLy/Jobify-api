@@ -6,7 +6,7 @@ require 'webmock'
 # Setting up VCR
 module VcrHelper
   CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-  JOB_CASSETTE = 'job_api'
+  RESUME_CASSETTE = 'resume_api'
 
   def self.setup_vcr
     VCR.configure do |c|
@@ -15,14 +15,14 @@ module VcrHelper
     end
   end
 
-  def self.configure_vcr_for_job
+  def self.configure_vcr_for_resume
     VCR.configure do |c|
-      c.filter_sensitive_data('<API_KEY>') { JOB_TOKEN }
-      c.filter_sensitive_data('<API_KEY_ESC>') { CGI.escape(JOB_TOKEN) }
+      c.filter_sensitive_data('<RESUME_TOKEN>') { RESUME_TOKEN }
+      c.filter_sensitive_data('<RESUME_TOKEN_ESC>') { CGI.escape(RESUME_TOKEN) }
     end
 
     VCR.insert_cassette(
-      JOB_CASSETTE,
+      GITUB_CASSETTE,
       record: :new_episodes,
       match_requests_on: %i[method uri headers]
     )

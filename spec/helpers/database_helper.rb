@@ -5,8 +5,16 @@ module DatabaseHelper
   def self.wipe_database
     # Ignore foreign key constraints when wiping tables
     Jobify::App.DB.run('PRAGMA foreign_keys = OFF')
-    Jobify::Database::JobOrm.map(&:destroy)
-    Jobify::Database::ListJobOrm.map(&:destroy)
+    Jobify::Database::CertificationOrm.map(&:destroy)
+    Jobify::Database::EducationOrm.map(&:destroy)
+    Jobify::Database::EmailOrm.map(&:destroy)
+    Jobify::Database::LanguageOrm.map(&:destroy)
+    Jobify::Database::PhoneOrm.map(&:destroy)
+    Jobify::Database::ResumeOrm.map(&:destroy)
+    Jobify::Database::SectionOrm.map(&:destroy)
+    Jobify::Database::SkillOrm.map(&:destroy)
+    Jobify::Database::WebsiteOrm.map(&:destroy)
+    Jobify::Database::WorkOrm.map(&:destroy)
     Jobify::App.DB.run('PRAGMA foreign_keys = ON')
   end
 end

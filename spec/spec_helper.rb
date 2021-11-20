@@ -8,16 +8,16 @@ require 'minitest/autorun'
 require 'minitest/rg'
 require 'vcr'
 require 'webmock'
-require 'careerjet/api_client'
-
+require './app/infrastructure/gateways_affinda/local_resume_api'
+require 'curb'
 require_relative '../init'
 
-SKILL = 'ruby'
-LOCATION = 'london'
-# CONFIG = YAML.safe_load(File.read('config/secrets_example.yml'))
-JOB_TOKEN = Jobify::App.config.API_KEY
-CORRECT = YAML.safe_load(File.read('spec/fixtures/carrerjet_results.yml'),
-                         permitted_classes: [Careerjet::Mash, Hashie::Array])
+FILE = 'app/models/resume.pdf'
+CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
+RESUME_TOKEN = CONFIG['RESUME_TOKEN']
+
+GOOD = YAML.safe_load(File.read('spec/fixtures/resumes_result.yml'))
+
 
 CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-CASSETTE_FILE = 'job_api'
+CASSETTE_FILE = 'affinda_api'
