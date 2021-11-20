@@ -1,42 +1,36 @@
-.container.border.home
-  form role="form" action="/jobs" method='POST' id='show-list-job'
-    .form-group.row
-      .text-right.col-sm-2.col-form-label.large Skill
-      .col-lg-8.col-md-6.col-sm-10.large
-        input { 
-          type='text' name='skill'
-          id='job_input' class="form-control"
-          placeholder="e.g. Ruby"
-          
-        }
-    .row
-      .col-md-12.blank-row
-    .form-group.row
-      .text-right.col-sm-2.col-form-label.large Location
-      .col-lg-8.col-md-6.col-sm-10
-        input { 
-          type='text' name='location'
-          id='location_input' class="form-control"
-          placeholder="e.g. London"
-        }
-    .row
-      .col-md-12.blank-row
-    .form-group.row
-      .col-lg-12.col-md-6.col-sm-10.text-center
-        button { 
-          type='submit' id='repo-name-submit' class='submit' 
-          value='submit' class="btn btn-primary" 
-        } Show Job 
-    .row
-      .col-md-12.blank-row
-    - if jobs.any?
-      table class="table table-hover" id="jobs_table"
-        thead
-          tr
-            th Url
-        tbody 
-          - jobs.each do |job|
-            tr class="table-row job_row"
-              td
-                a.job.url href="#{job.url}"
-                  = "#{job.company} full link " 
+javascript:
+  $(document).ready(function() {
+    $("#resume_upload").fileinput({
+      showUpload: false,
+      dropZoneEnabled: false,
+      maxFileCount: 10,
+      inputGroupClass: "input-group-sm"
+    });
+  });
+== assets([:css, :layout])
+== assets(:js, defer: true)
+#information.section
+  .section-center
+    .container
+      .row
+        .col-md-7.col-md-push-5
+          .information-cta
+            h1 Jobify
+            p
+              | A well-crafted application to beautify your CV and suggest Jobs.
+        .col-md-5.col-md-pull-7
+          .information-form
+            form role="form" action="/formats" method='POST' id='show-formats' enctype="multipart/form-data"
+              .form-group
+                span.form-label Your Resume
+                .file-loading 
+                  input{
+                    type="file"
+                    class="form-control"  
+                    id='resume_upload' 
+                    accept="application/pdf,application/msword, 
+                    application/vnd.openxmlformats-officedocument.wordprocessingml.document" 
+                    name="file" 
+                    required
+                    }
+

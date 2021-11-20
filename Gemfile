@@ -51,3 +51,6 @@ end
 
 # CareerJet API Gem
 gem 'careerjet-api-client'
+
+# HTTP posts
+gem 'httmultiparty'
