@@ -6,9 +6,10 @@ A tool that allow job applicants to format their resume in a professional way an
 * Resume too long or not lisible
 
 #### Short Term Solutions
-* Analyze Resume to find important missing information
+* Analyze Resume And Highlight important missing information
+* Return resume completeness percentage
 * Change resume format
-* download resume
+* Download resume
 
 #### Long Term Solutions
 * Allow users to add missing Information
