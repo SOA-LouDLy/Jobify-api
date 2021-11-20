@@ -1,5 +1,16 @@
+
 # Jobify
-###### Application that returns jobs based on user skills on their CV
-## Overview
-###### Jobify will allow users to upload their resume and will return jobs data in a selected location pulled from CareerJet 
-###### The goal of this project is to help users to locate jobs that more accurately reflect their level of experience and skills.
+A tool that allow job applicants to format their resume in a professional way and maximize their hiring possibility.
+#### Common Issues
+* Resume misses important information
+* Resume too long or not lisible
+
+#### Short Term Solutions
+* Analyze Resume And Highlight important missing information
+* Return resume completeness percentage
+* Change resume format
+* Download resume
+
+#### Long Term Solutions
+* Allow users to add missing Information
+* Review and highlight spelling, grammar, punctuation, and clarity mistakes
