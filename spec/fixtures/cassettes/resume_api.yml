@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.affinda.com/v1/resumes
+    body:
+      encoding: UTF-8
+      string: file=app%2Fmodels%2Fresume.pdf
+    headers:
+      Authorization:
+      - Bearer <RESUME_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sat, 20 Nov 2021 13:21:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '44'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":401,"detail":"Invalid token."}'
+  recorded_at: Sat, 20 Nov 2021 13:21:32 GMT
+recorded_with: VCR 6.0.0

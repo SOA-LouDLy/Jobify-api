@@ -12,7 +12,7 @@ require './app/infrastructure/gateways_affinda/local_resume_api'
 require 'curb'
 require_relative '../init'
 
-FILE = 'app/models/resume.pdf'
+FILE = 'spec/resume.pdf'
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 RESUME_TOKEN = CONFIG['RESUME_TOKEN']
 

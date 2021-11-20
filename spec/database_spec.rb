@@ -8,7 +8,7 @@ describe 'Integration Tests of Github API and Database' do
   VcrHelper.setup_vcr
 
   before do
-    VcrHelper.def configure_vcr_for_resume
+    VcrHelper.configure_vcr_for_resume
   end
 
   after do
@@ -22,7 +22,7 @@ describe 'Integration Tests of Github API and Database' do
 
     it 'HAPPY: should be able to save resume from resume to database' do
       resume = Jobify::Affinda::ResumeMapper
-               .new(RESUME_TOKEN, Jobify:Affinda::Api)
+        .new(RESUME_TOKEN, Jobify::Affinda::Api).resume(FILE)
 
       rebuilt_resume = Jobify::Repository::For.entity(resume).create(resume)
 

@@ -22,7 +22,7 @@ module VcrHelper
     end
 
     VCR.insert_cassette(
-      GITUB_CASSETTE,
+      RESUME_CASSETTE,
       record: :new_episodes,
       match_requests_on: %i[method uri headers]
     )
