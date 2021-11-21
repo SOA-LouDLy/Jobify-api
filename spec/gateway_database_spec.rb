@@ -15,7 +15,7 @@ describe 'Integration Tests of Affinda API and Database' do
     VcrHelper.eject_vcr
   end
 
-  describe 'Retrieve and store project' do
+  describe 'Retrieve and store resume' do
     before do
       DatabaseHelper.wipe_database
     end
