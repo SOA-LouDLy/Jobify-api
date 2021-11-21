@@ -71,37 +71,45 @@ describe 'Integration Tests of Affinda API and Database' do
       end
 
       resume.certifications.each.with_index do |certification, index|
+        # This is the code that will be run to the tests on certification
         _(certification.name).must_equal @certifications[index].name
       end
 
       resume.emails.each.with_index do |email, index|
         _(email.email).must_equal @emails[index].email
+        # This is the code that will be run to the tests on emails
       end
 
       resume.phone_numbers.each.with_index do |phone, index|
+        # This is the code that will be run to the tests on phone_numbers
         _(phone.number).must_equal @phone_numbers[index].number
       end
 
       resume.sections.each.with_index do |section, index|
+        # This is the code that will be run to the tests on sections
         _(section.section_type).must_equal @sections[index].section_type
         _(section.text).must_equal @sections[index].text
       end
 
       resume.skills.each.with_index do |skill, index|
+        # This is the code that will be run to the tests on skills
         _(skill.name).must_equal @skills[index].name
         _(skill.experience).must_equal @skills[index].experience
         _(skill.type).must_equal @skills[index].type
       end
 
       resume.languages.each.with_index do |language, index|
+        # This is the code that will be run to the tests on languages
         _(language.name).must_equal @languages[index].name
       end
 
       resume.websites.each.with_index do |web, index|
+        # This is the code that will be run to the tests on websites
         _(web.website).must_equal @websites[index].website
       end
 
       resume.works.each.with_index do |work, index|
+        # This is the code that will be run to the tests on work_experience
         _(work.job_title).must_equal @works[index].job_title
         _(work.organization).must_equal @works[index].organization
         _(work.formatted_location).must_equal @works[index].formatted_location
