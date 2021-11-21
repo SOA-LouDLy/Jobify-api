@@ -1,0 +1,311 @@
+---
+data:
+  certifications:
+  - PHP Framework certificate Zend Codeigniter Symfony
+  - Programming Languages JavaScript HTML5 PHP OOP CSS SQL MySQL
+  dateOfBirth:
+  education:
+  - organization: Columbia University
+    accreditation:
+      education: Bachelor of Science
+      educationLevel: bachelors
+      inputStr: 'Bachelor of Science: Computer Information Systems'
+      matchStr: ''
+    grade:
+    location:
+      formatted: New York, NY, USA
+      streetNumber:
+      street:
+      apartmentNumber:
+      city: New York
+      postalCode:
+      state: New York
+      country: United States
+      rawInput: NY
+    dates:
+      startDate:
+      completionDate: '2014-01-01'
+      isCurrent: false
+  emails:
+  - christoper.morgan@gmail.com
+  location:
+    formatted: 6PQ, 177 Great Portland St, London W1W 5PQ, UK
+    streetNumber: '177'
+    street: Great Portland Street
+    apartmentNumber: 6PQ
+    city:
+    postalCode: W1W 5PQ
+    state: England
+    country: United Kingdom
+    rawInput: 177 Great Portland Street, London W5W 6PQ
+  name:
+    raw: CHRISTOPHER MORGAN
+    last: Morgan
+    first: Christopher
+    title: ''
+    middle: ''
+  objective: ''
+  phoneNumbers:
+  - "+442076668555"
+  publications: []
+  referees: []
+  sections:
+  - sectionType: PersonalDetails
+    bbox:
+    - 50.27971
+    - 48.197693
+    - 564.59155
+    - 137.48401
+    pageIndex: 0
+    text: 'CHRISTOPHER MORGAN Address: 177 Great Portland Street, London W5W 6PQ Phone:
+      +44 (0)20 7666 8555 Email: christoper.morgan@gmail.com'
+  - sectionType: Summary
+    bbox:
+    - 50.8199
+    - 178.61371
+    - 535.00037
+    - 262.89594
+    pageIndex: 0
+    text: Summary Senior Web Developer specializing in front end development. Experienced
+      with all stages of the development cycle for dynamic web projects. Well-versed
+      in numerous programming languages including HTML5, PHP OOP, JavaScript, CSS,
+      MySQL. Strong background in project management and customer relations.
+  - sectionType: Skills/Interests/Languages
+    bbox:
+    - 50.962704
+    - 290.93372
+    - 402.40277
+    - 360.92395
+    pageIndex: 0
+    text: Skill Highlights • Project management • Strong decision maker • Complex
+      problem solver • Creative design • Innovative • Service-focused
+  - sectionType: WorkExperience
+    bbox:
+    - 50.6519
+    - 383.5267
+    - 531.7223
+    - 542.604
+    pageIndex: 0
+    text: Experience Web Developer - 09/2015 to 05/2019 Luna Web Design, New York
+      • Cooperate with designers to create clean interfaces and simple, intuitive
+      interactions and experiences. • Develop project concepts and maintain optimal
+      workflow. • Work with senior developer to manage large, complex design projects
+      for corporate clients. • Complete detailed programming and development tasks
+      for front end public and internal websites as well as challenging back-end server
+      code. • Carry out quality assurance tests to discover errors and optimize usability.
+  - sectionType: Education
+    bbox:
+    - 50.8679
+    - 567.6067
+    - 340.4374
+    - 621.07196
+    pageIndex: 0
+    text: 'Education Bachelor of Science: Computer Information Systems - 2014 Columbia
+      University, NY'
+  - sectionType: Skills/Interests/Languages
+    bbox:
+    - 50.8199
+    - 646.0867
+    - 145.04034
+    - 697.29596
+    pageIndex: 0
+    text: Languages Spanish – C2 Chinese – A1
+  - sectionType: Training/Certifications
+    bbox:
+    - 51.155663
+    - 724.1337
+    - 410.1574
+    - 777.804
+    pageIndex: 0
+    text: 'Certifications PHP Framework (certificate): Zend, Codeigniter, Symfony.
+      Programming Languages: JavaScript, HTML5, PHP OOP, CSS, SQL, MySQL.'
+  skills:
+  - name: Management
+    lastUsed:
+    numberOfMonths:
+    type: soft_skill
+    sources:
+    - section: Skills/Interests/Languages
+      position:
+    - section: Summary
+      position:
+  - name: Project Management
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Skills/Interests/Languages
+      position:
+    - section: Summary
+      position:
+  - name: SQL (Programming Language)
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+  - name: JavaScript (Programming Language)
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+  - name: Web Design
+    lastUsed: '2019-05-01'
+    numberOfMonths: 44
+    type: hard_skill
+    sources:
+    - section: WorkExperience
+      position: 0
+  - name: MySQL
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+  - name: Quality Assurance
+    lastUsed: '2019-05-01'
+    numberOfMonths: 44
+    type: soft_skill
+    sources:
+    - section: WorkExperience
+      position: 0
+  - name: HTML5
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+  - name: Usability
+    lastUsed: '2019-05-01'
+    numberOfMonths: 44
+    type: hard_skill
+    sources:
+    - section: WorkExperience
+      position: 0
+  - name: CodeIgniter
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Training/Certifications
+      position:
+  - name: Spanish Language
+    lastUsed:
+    numberOfMonths:
+    type: soft_skill
+    sources:
+    - section: Skills/Interests/Languages
+      position:
+  - name: Object-Oriented Programming (OOP)
+    lastUsed: '2019-05-01'
+    numberOfMonths: 44
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+    - section: WorkExperience
+      position: 0
+  - name: PHP (Scripting Language)
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+  - name: Mandarin Chinese
+    lastUsed:
+    numberOfMonths:
+    type: soft_skill
+    sources:
+    - section: Skills/Interests/Languages
+      position:
+  - name: Cascading Style Sheets (CSS)
+    lastUsed:
+    numberOfMonths:
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: Training/Certifications
+      position:
+  - name: Front End (Software Engineering)
+    lastUsed: '2019-05-01'
+    numberOfMonths: 44
+    type: hard_skill
+    sources:
+    - section: Summary
+      position:
+    - section: WorkExperience
+      position: 0
+  languages:
+  - Spanish
+  summary: Senior Web Developer specializing in front end development. Experienced
+    with all stages of the development cycle for dynamic web projects. Well-versed
+    in numerous programming languages including HTML5, PHP OOP, JavaScript, CSS, MySQL.
+    Strong background in project management and customer relations.
+  websites: []
+  linkedin:
+  totalYearsExperience: 4
+  profession: Web Developer and Web Marketing
+  workExperience:
+  - jobTitle: Web Developer
+    organization: Luna Web Design
+    location:
+      formatted: New York, NY, USA
+      streetNumber:
+      street:
+      apartmentNumber:
+      city: New York
+      postalCode:
+      state: New York
+      country: United States
+      rawInput: New York
+    dates:
+      startDate: '2015-09-01'
+      endDate: '2019-05-01'
+      monthsInPosition: 44
+      isCurrent: false
+    jobDescription: " Cooperate with designers to create clean interfaces and simple,
+      intuitive interactions and experiences. \nDevelop project concepts and maintain
+      optimal workflow. \nWork with senior developer to manage large, complex design
+      projects for corporate clients. \nComplete detailed programming and development
+      tasks for front end public and internal websites as well as challenging back-end
+      server code. \nCarry out quality assurance tests to discover errors and optimize
+      usability. "
+  headShot:
+  isResumeProbability: 86
+  rawText: |-
+    CHRISTOPHER MORGAN Address: 177 Great Portland Street, London W5W 6PQ Phone: +44 (0)20 7666 8555 Email: christoper.morgan@gmail.com
+    Summary Senior Web Developer specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including HTML5, PHP OOP, JavaScript, CSS, MySQL. Strong background in project management and customer relations.
+    Skill Highlights • Project management • Strong decision maker • Complex problem solver • Creative design • Innovative • Service-focused
+    Experience Web Developer - 09/2015 to 05/2019 Luna Web Design, New York • Cooperate with designers to create clean interfaces and simple, intuitive interactions and experiences. • Develop project concepts and maintain optimal workflow. • Work with senior developer to manage large, complex design projects for corporate clients. • Complete detailed programming and development tasks for front end public and internal websites as well as challenging back-end server code. • Carry out quality assurance tests to discover errors and optimize usability.
+    Education Bachelor of Science: Computer Information Systems - 2014 Columbia University, NY
+    Languages Spanish – C2 Chinese – A1
+    Certifications PHP Framework (certificate): Zend, Codeigniter, Symfony. Programming Languages: JavaScript, HTML5, PHP OOP, CSS, SQL, MySQL.
+meta:
+  identifier: ogPCnDmF
+  ready: true
+  failed: false
+  readyDt: '2021-11-19T18:08:05.728165Z'
+  fileName:
+  expiryTime:
+error:
+  errorCode:
+  errorDetail:
