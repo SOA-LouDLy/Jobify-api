@@ -32,14 +32,14 @@ describe 'Integration Tests of Affinda API and Database' do
 
       _(rebuilt.identifier).must_equal(resume.identifier)
       _(rebuilt.name).must_equal(resume.name)
-      _(rebuilt.birth).must_equal(resume.birth)
+      _(assert_nil(rebuilt.birth)).must_equal(assert_nil(resume.birth))
       _(rebuilt.formatted_location).must_equal(resume.formatted_location)
       _(rebuilt.location).must_equal(resume.location)
-      _(rebuilt.country).must_equal(resume.country)
-      _(rebuilt.state).must_equal(resume.state)
+      _(assert_nil(rebuilt.country)).must_equal(assert_nil(resume.country))
+      _(assert_nil(rebuilt.state)).must_equal(assert_nil(resume.state))
       _(rebuilt.objective).must_equal(resume.objective)
       _(rebuilt.summary).must_equal(resume.summary)
-      _(rebuilt.linkedin).must_equal(resume.linkedin)
+      _(assert_nil(rebuilt.linkedin)).must_equal(assert_nil(resume.linkedin))
       _(rebuilt.total_experience).must_equal(resume.total_experience)
       _(rebuilt.profession).must_equal(resume.profession)
       _(rebuilt.certifications.count).must_equal(resume.certifications.count)
@@ -63,10 +63,10 @@ describe 'Integration Tests of Affinda API and Database' do
         # This is the code that will be run to the tests on education
         _(degree.organization).must_equal @education[index].organization
         _(degree.accreditation).must_equal @education[index].accreditation
-        _(degree.grade).must_equal @education[index].grade
+        _(assert_nil(degree.grade)).must_equal assert_nil(@education[index].grade)
         _(degree.formatted_location).must_equal @education[index].formatted_location
         _(degree.raw_location).must_equal @education[index].raw_location
-        _(degree.starting_date).must_equal @education[index].starting_date
+        _(assert_nil(degree.starting_date)).must_equal assert_nil(@education[index].starting_date)
         _(degree.end_date).must_equal @education[index].end_date
       end
 

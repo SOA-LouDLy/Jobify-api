@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/loudwigeodice/Desktop/Jobify/init.rb": {
+      "/home/billy/Jobify/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/config/init.rb": {
+      "/home/billy/Jobify/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/config/environment.rb": {
+      "/home/billy/Jobify/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -54,7 +54,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/init.rb": {
+      "/home/billy/Jobify/app/init.rb": {
         "lines": [
           null,
           null,
@@ -63,7 +63,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/init.rb": {
+      "/home/billy/Jobify/app/models/init.rb": {
         "lines": [
           null,
           null,
@@ -75,7 +75,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/certification.rb": {
+      "/home/billy/Jobify/app/models/entities/certification.rb": {
         "lines": [
           null,
           null,
@@ -99,7 +99,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/education.rb": {
+      "/home/billy/Jobify/app/models/entities/education.rb": {
         "lines": [
           null,
           null,
@@ -129,7 +129,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/email.rb": {
+      "/home/billy/Jobify/app/models/entities/email.rb": {
         "lines": [
           null,
           null,
@@ -153,7 +153,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/language.rb": {
+      "/home/billy/Jobify/app/models/entities/language.rb": {
         "lines": [
           null,
           null,
@@ -177,7 +177,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/phone_number.rb": {
+      "/home/billy/Jobify/app/models/entities/phone_number.rb": {
         "lines": [
           null,
           null,
@@ -201,7 +201,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/resume.rb": {
+      "/home/billy/Jobify/app/models/entities/resume.rb": {
         "lines": [
           null,
           null,
@@ -258,7 +258,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/section.rb": {
+      "/home/billy/Jobify/app/models/entities/section.rb": {
         "lines": [
           null,
           null,
@@ -283,7 +283,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/skill.rb": {
+      "/home/billy/Jobify/app/models/entities/skill.rb": {
         "lines": [
           null,
           null,
@@ -309,7 +309,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/work.rb": {
+      "/home/billy/Jobify/app/models/entities/work.rb": {
         "lines": [
           null,
           null,
@@ -341,7 +341,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/entities/website.rb": {
+      "/home/billy/Jobify/app/models/entities/website.rb": {
         "lines": [
           null,
           null,
@@ -365,7 +365,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/certification_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/certification_mapper.rb": {
         "lines": [
           null,
           null,
@@ -406,7 +406,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/education_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/education_mapper.rb": {
         "lines": [
           null,
           null,
@@ -482,7 +482,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/email_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/email_mapper.rb": {
         "lines": [
           null,
           null,
@@ -523,7 +523,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/language_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/language_mapper.rb": {
         "lines": [
           null,
           null,
@@ -564,7 +564,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/phone_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/phone_mapper.rb": {
         "lines": [
           null,
           null,
@@ -605,7 +605,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/resume_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/resume_mapper.rb": {
         "lines": [
           null,
           null,
@@ -752,7 +752,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/section_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/section_mapper.rb": {
         "lines": [
           null,
           null,
@@ -798,7 +798,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/skill_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/skill_mapper.rb": {
         "lines": [
           null,
           null,
@@ -849,7 +849,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/website_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/website_mapper.rb": {
         "lines": [
           null,
           null,
@@ -890,7 +890,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/mappers/work_experience_mapper.rb": {
+      "/home/billy/Jobify/app/models/mappers/work_experience_mapper.rb": {
         "lines": [
           null,
           null,
@@ -976,7 +976,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/certifications.rb": {
+      "/home/billy/Jobify/app/models/repositories/certifications.rb": {
         "lines": [
           null,
           null,
@@ -1015,7 +1015,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/educations.rb": {
+      "/home/billy/Jobify/app/models/repositories/educations.rb": {
         "lines": [
           null,
           null,
@@ -1060,7 +1060,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/emails.rb": {
+      "/home/billy/Jobify/app/models/repositories/emails.rb": {
         "lines": [
           null,
           null,
@@ -1099,7 +1099,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/for.rb": {
+      "/home/billy/Jobify/app/models/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -1142,7 +1142,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/resumes.rb": {
+      "/home/billy/Jobify/app/models/repositories/resumes.rb": {
         "lines": [
           null,
           null,
@@ -1318,7 +1318,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/phones.rb": {
+      "/home/billy/Jobify/app/models/repositories/phones.rb": {
         "lines": [
           null,
           null,
@@ -1357,7 +1357,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/sections.rb": {
+      "/home/billy/Jobify/app/models/repositories/sections.rb": {
         "lines": [
           null,
           null,
@@ -1397,7 +1397,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/skills.rb": {
+      "/home/billy/Jobify/app/models/repositories/skills.rb": {
         "lines": [
           null,
           null,
@@ -1438,7 +1438,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/languages.rb": {
+      "/home/billy/Jobify/app/models/repositories/languages.rb": {
         "lines": [
           null,
           null,
@@ -1477,7 +1477,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/websites.rb": {
+      "/home/billy/Jobify/app/models/repositories/websites.rb": {
         "lines": [
           null,
           null,
@@ -1516,7 +1516,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/works.rb": {
+      "/home/billy/Jobify/app/models/repositories/works.rb": {
         "lines": [
           null,
           null,
@@ -1563,7 +1563,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/models/repositories/init.rb": {
+      "/home/billy/Jobify/app/models/repositories/init.rb": {
         "lines": [
           null,
           null,
@@ -1572,7 +1572,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/init.rb": {
+      "/home/billy/Jobify/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
@@ -1582,7 +1582,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/gateways_affinda/init.rb": {
+      "/home/billy/Jobify/app/infrastructure/gateways_affinda/init.rb": {
         "lines": [
           null,
           null,
@@ -1591,7 +1591,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/gateways_affinda/local_resume_api.rb": {
+      "/home/billy/Jobify/app/infrastructure/gateways_affinda/local_resume_api.rb": {
         "lines": [
           null,
           null,
@@ -1638,7 +1638,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/gateways_affinda/resume_api.rb": {
+      "/home/billy/Jobify/app/infrastructure/gateways_affinda/resume_api.rb": {
         "lines": [
           null,
           null,
@@ -1690,7 +1690,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/init.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/init.rb": {
         "lines": [
           null,
           null,
@@ -1700,7 +1700,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/init.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/init.rb": {
         "lines": [
           null,
           null,
@@ -1709,7 +1709,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/certification_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/certification_orm.rb": {
         "lines": [
           null,
           null,
@@ -1734,7 +1734,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/education_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/education_orm.rb": {
         "lines": [
           null,
           null,
@@ -1760,7 +1760,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/email_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/email_orm.rb": {
         "lines": [
           null,
           null,
@@ -1784,7 +1784,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/language_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/language_orm.rb": {
         "lines": [
           null,
           null,
@@ -1809,7 +1809,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/phone_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/phone_orm.rb": {
         "lines": [
           null,
           null,
@@ -1833,7 +1833,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/resume_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/resume_orm.rb": {
         "lines": [
           null,
           null,
@@ -1888,7 +1888,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/section_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/section_orm.rb": {
         "lines": [
           null,
           null,
@@ -1914,7 +1914,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/skill_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/skill_orm.rb": {
         "lines": [
           null,
           null,
@@ -1939,7 +1939,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/website_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/website_orm.rb": {
         "lines": [
           null,
           null,
@@ -1964,7 +1964,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/infrastructure/database/orms/work_orm.rb": {
+      "/home/billy/Jobify/app/infrastructure/database/orms/work_orm.rb": {
         "lines": [
           null,
           null,
@@ -1988,7 +1988,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/controllers/init.rb": {
+      "/home/billy/Jobify/app/controllers/init.rb": {
         "lines": [
           null,
           null,
@@ -1997,7 +1997,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/app/controllers/app.rb": {
+      "/home/billy/Jobify/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -2071,7 +2071,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/spec/helpers/vcr_helper.rb": {
+      "/home/billy/Jobify/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -2109,7 +2109,7 @@
           null
         ]
       },
-      "/Users/loudwigeodice/Desktop/Jobify/spec/helpers/database_helper.rb": {
+      "/home/billy/Jobify/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -2134,6 +2134,6 @@
         ]
       }
     },
-    "timestamp": 1637517819
+    "timestamp": 1637652504
   }
 }
