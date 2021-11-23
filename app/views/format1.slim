@@ -11,7 +11,12 @@ html
     link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css" /
     link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" /
     link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" /
-  body.A4
+    script {
+      src="https://kit.fontawesome.com/d460f5a1d0.js" 
+      crossorigin="anonymous"
+    }
+      
+  body
     / Popper
     script{ 
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -30,59 +35,106 @@ html
     script{
       src="https://code.jquery.com/jquery-3.6.0.min.js" 
       crossorigin="anonymous"
-    }
-
-  .rela-block.page
-  .rela-block.top-bar
-    .caps.name
-      .abs-center 
-      = resume.name
-  .side-bar
-    p 
-      = resume.country
-    p Astoria, New York 11105
-    p 1-800-CALLPLZ
-    p emailsareforsquares@gmail.com
-    br/
-    p.rela-block.social.twitter Twitter stuff
-    p.rela-block.social.pinterest Pinterest things
-    p.rela-block.social.linked-in Linked-in man
-    p.rela-block.caps.side-header Skills
-    p.rela-block.list-thing HTML
-    p.rela-block.list-thing CSS (Stylus)
-    p.rela-block.list-thing JavaScript & jQuery
-    p.rela-block.list-thing Killer Taste
-    p.rela-block.caps.side-header Education
-    p.rela-block.list-thing Advanced potion making
-    p.rela-block.list-thing Degree in popping and locking
-    p.rela-block.list-thing Knitting game on point
-    p.rela-block.list-thing Culinary af
-  .rela-block.content-container
-    h2.rela-block.caps.title Jr Front-End Developer
-    .rela-block.separator
-    .rela-block.caps.greyed Profile
-    p.long-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida mollis magna et sagittis. Proin egestas gravida dapibus. Curabitur dictum tristique varius. Donec urna mauris, pharetra eu mattis a, hendrerit sed est. Morbi ac maximus dolor, vel porttitor turpis. Quisque volutpat cursus nulla at pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    .rela-block.caps.greyed Experience
-    h3 Job #1
-    p.light First job description
-    p.justified Quisque condimentum porttitor ipsum vulputate tincidunt. Sed non condimentum purus, nec rhoncus ex. Sed quis diam ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique in velit ut pellentesque. Ut pellentesque odio consectetur pulvinar lacinia. Praesent in auctor ipsum. Vivamus at finibus sapien.
-    h3 Job #2
-    p.light Second Job Description
-    p.justified Quisque condimentum porttitor ipsum vulputate tincidunt. Sed non condimentum purus, nec rhoncus ex. Sed quis diam ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique in velit ut pellentesque. Ut pellentesque odio consectetur pulvinar lacinia. Praesent in auctor ipsum. Vivamus at finibus sapien.
-    h3 Job #3
-    p.light Third Job Description
-    p.justified Quisque condimentum porttitor ipsum vulputate tincidunt. Sed non condimentum purus, nec rhoncus ex. Sed quis diam ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique in velit ut pellentesque. Ut pellentesque odio consectetur pulvinar lacinia. Praesent in auctor ipsum. Vivamus at finibus sapien.
-
-    / .container id='html_body'
-    /   section
-    /     .row style="vertical-align: left;"
-    /       .col
-    /         h1
-    /           a.text-underline-hover.text-white href="/" Jobify 
-             
-    / section
-    /   == yield
-
-
-      footer
-        = "The best place to find your dream job."
+    }  
+    
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand.mb-0.px-3 href="/"
+        h2
+          | Jobify
+      a#analysis_resume
+        h3| Analysis
+    .rela-block.analysis
+      i.fas.fa-long-arrow-alt-left.bigger.px-3.show_resume
+      h2.text-center.mt-3
+        | Full Analysis of Resume 
+      br/
+      ul.list-group.list-group-flush.px-3.nice
+        - arr = analysis.split("\n")
+        - score = arr.pop.to_i
+        - arr&.each do |line|
+          li.list-group-item
+            = line
+      h3.mr-3.right style="text-align:right;" 
+        | Final Score: 
+        = score
+      br/ 
+      - if score >= 90
+        p.bigger.right style="text-align:right;" &#128588;
+        br/ 
+      - if score >= 80 and score < 90
+        p.bigger.right style="text-align:right;" &#128077;
+        br/
+      - if score >= 70 and score < 80
+        p.bigger.right style="text-align:right;" &#128578;
+        br/
+      - if score >= 60 and score < 70
+        p.bigger.right style="text-align:right;" &#128549;
+        br/
+      - if score < 60
+        p.bigger.right style="text-align:right;" &#128557;
+        br/
+        
+        
+    .rela-block.page
+      .rela-block.top-bar
+        .caps.name
+          .abs-center 
+          = resume.name
+      .side-bar
+        p 
+          strong = resume.location
+        p 
+          strong = resume.country
+        - resume.phone_numbers.each do |phone|
+          p 
+            strong = phone.number
+        - resume.emails.each do |email|
+          p 
+            strong = email.email
+        br/
+        p.rela-block.social.linked-in 
+          = resume.linkedin
+        p.rela-block.caps.side-header Education
+        - resume.education.each do |education|
+          p.rela-block.list-thing
+            = puts education
+            = education.organization 
+          p.rela-block.list-thing
+            strong = "#{education.starting_date} -- #{education.end_date}"
+        p.rela-block.caps.side-header Skills
+        - resume.skills.each.with_index do |skill, index| 
+          p.rela-block.list-thing 
+            = skill.name
+            - break if index > 7
+      .rela-block.content-container
+        h2.rela-block.caps.title 
+          =resume.profession
+        .rela-block.separator
+        .rela-block.caps.greyed Profile
+        p.long-margin 
+          = resume.summary
+        .rela-block.caps.greyed Experience
+        - resume.works.each do |work|
+          h3
+            = work.job_title
+          p.light 
+            = "#{work.organization} => #{work.starting_date} - #{work.end_date}"
+          p.justified  
+            ul
+              - work.description.split("\n").each do |line|
+                li 
+                  = line
+        .rela-block.caps.greyed Language
+        ul 
+          - resume.languages.each do |language|
+            li
+              = language.name
+    javascript:
+        $( "#analysis_resume" ).click(function() {
+          $(".page").hide()
+          $(".analysis").show()
+        });
+        $( ".show_resume" ).click(function(){
+          $(".analysis").hide()
+          $(".page").show()
+        })

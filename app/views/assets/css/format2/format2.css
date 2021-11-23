@@ -27,13 +27,13 @@
 }
 
 body {
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  display: flex;
-  justify-content: center;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  background-color: #fff !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300 !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 .btn-print {
   z-index: 1;
@@ -141,7 +141,7 @@ body {
   color: #5695cd;
 }
 .resume .xp-item {
-  margin-bottom: 4em;
+  margin-bottom: 1em !important;
 }
 .resume .xp-item:last-child {
   margin-bottom: 0;
@@ -166,7 +166,7 @@ body {
   font-size: 0.8em;
   margin-top: 0.3em;
   margin-bottom: 1em;
-  color: #5695cd;
+  color: #000000 !important;
 }
 .resume .extra {
   margin-bottom: 2em;
@@ -214,6 +214,6 @@ body {
     display: none;
   }
 }
-nav.navbar {
-  display: none;
+.bigger {
+  font-size: 30px;
 }
