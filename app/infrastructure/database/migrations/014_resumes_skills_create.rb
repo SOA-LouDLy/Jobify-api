@@ -5,11 +5,11 @@ require 'sequel'
 Sequel.migration do
   change do
     create_table(:resumes_skills) do
-      primary_key %i[resume_id skill_id]
-      foreign_key :resume_id, :resumes
+      primary_key %i[resume_orm_id skill_id]
+      foreign_key :resume_orm_id, :resumes
       foreign_key :skill_id, :skills
 
-      index %i[resume_id skill_id]
+      index %i[resume_orm_id skill_id]
     end
   end
 end

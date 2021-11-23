@@ -33,6 +33,12 @@ Style/HashSyntax:
   Exclude:
     - Rakefile
 
+Metrics/CyclomaticComplexity:
+  Max: 8
+
+Metrics/AbcSize:
+  Max: 25
+
 Style/SymbolArray:
   Enabled: true
   Exclude:

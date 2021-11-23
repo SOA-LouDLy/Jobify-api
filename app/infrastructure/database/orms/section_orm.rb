@@ -9,7 +9,7 @@ module Jobify
       many_to_many :resumes,
                    class: :'Jobify::Database::ResumeOrm',
                    join_table: :resumes_sections,
-                   left_key: :section_id, right_key: :resume_id
+                   left_key: :section_id, right_key: :resume_orm_id
 
       plugin :timestamps, update_on_create: true
 

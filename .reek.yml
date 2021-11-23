@@ -5,3 +5,10 @@ detectors:
 exclude_paths:
   - _snippets
   - lib/job_info.rb # one-time test fixture 
+
+detectors:
+  TooManyStatements:
+    enabled: true
+    exclude:
+    - initialize
+    max_statements: 10

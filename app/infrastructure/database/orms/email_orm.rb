@@ -7,8 +7,8 @@ module Jobify
     # Object Relational Mapper for Resume Entities
     class EmailOrm < Sequel::Model(:emails)
       many_to_one :resume,
-                  class: :'Jobify::Database::ResumeOrm',
-                  id: :resume_id
+                  class: :'Jobify::Database::ResumeOrm'
+      #   id: :resume_id
 
       plugin :timestamps, update_on_create: true
 

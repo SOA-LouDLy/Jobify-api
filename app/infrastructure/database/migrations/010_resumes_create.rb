@@ -5,7 +5,7 @@ require 'sequel'
 Sequel.migration do
   change do
     create_table(:resumes) do
-      primary_key :id
+      primary_key :resume_orm_id
 
       String        :identifier, unique: true
       String        :birth

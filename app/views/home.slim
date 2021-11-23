@@ -33,4 +33,27 @@ javascript:
                     name="file" 
                     required
                     }
+              .form-btn
+              button { 
+                type='submit' id='cv-submit' class='submit' 
+                value='submit' class="btn btn-primary" 
+              } Submit
+- if resumes.any?
+  .styled
+    h3.text-center.mt-3
+      | Past Resumes
+    table class="styled-table" id="resumes_table"
+      thead class='thead-dark'
+        tr
+          th Names 
+          th Profession 
+      tbody
+        - resumes.each.with_index do |resume, index|
+          tr class="table-row resume_row" data-href="format1/#{resume.identifier}" id="resume[#{index}].row"
+            td id='td_resume_user_name'
+              span class="resume_table_name" id="resume[#{index}].name"
+                = resume.name
+            td id='td_resume_profession'
+              span class="resume_table_profession" id="resume[#{index}].profession"
+                = resume.profession
 

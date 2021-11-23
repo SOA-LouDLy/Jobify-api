@@ -12,7 +12,7 @@ module Jobify
                     css: { format1: 'format1.css',
                            format2: 'format2.css',
                            layout: 'style.css',
-                           formats: 'formats.css' }
+                           formats: 'formats.css' }, js: 'table_row_click.js'
     plugin :halt
 
     route do |routing|
@@ -20,7 +20,9 @@ module Jobify
       routing.public
       # GET /
       routing.root do
-        view 'formats'
+        # view 'home'
+        resumes = Jobify::Repository::For.klass(Entity::Resume).all
+        view 'home', locals: { resumes: resumes }
       end
       routing.on 'formats' do
         routing.is do
@@ -54,7 +56,8 @@ module Jobify
         routing.on String do |identifier|
           resume = Jobify::Repository::For.klass(Entity::Resume)
             .find_full_resume(identifier)
-          view 'format1', locals: { resume: resume }
+          analysis = Mapper::Analysis.new(resume).analysis
+          view 'format1', locals: { resume: resume, analysis: analysis }
         end
       end
 
@@ -62,7 +65,8 @@ module Jobify
         routing.on String do |identifier|
           resume = Jobify::Repository::For.klass(Entity::Resume)
             .find_full_resume(identifier)
-          view 'format2', locals: { resume: resume }
+          analysis = Mapper::Analysis.new(resume).analysis
+          view 'format2', locals: { resume: resume, analysis: analysis }
         end
       end
     end
