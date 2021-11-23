@@ -42,7 +42,7 @@ module Jobify
           end
         end
 
-        routing.on String, String do |identifier|
+        routing.on String do |identifier|
           # GET /job/skill/location
           routing.get do
             resume = Jobify::Repository::For.klass(Entity::Resume)

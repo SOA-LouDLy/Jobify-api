@@ -14,24 +14,24 @@ module Jobify
   module Repository
     # Repository for Job Entities
     class Resumes
-      @data = Sequel[:resumes][:id]
+      @data = Sequel[:resumes][:resume_orm_id]
       def self.all
         Database::ResumeOrm.all.map { |db_resume| rebuild_entity(db_resume) }
       end
 
       def self.find_full_resume(identifier)
         db_resume = Jobify::Database::ResumeOrm
-                    .left_join(:resumes_certifications, resume_id: @data)
-                    .left_join(:resumes_educations, resume_id: @data)
-                    .left_join(:emails, resume_orm_id: @data)
-                    .left_join(:phones, resume_orm_id: @data)
-                    .left_join(:resumes_sections, resume_id: @data)
-                    .left_join(:resumes_skills, resume_id: @data)
-                    .left_join(:resumes_languages, resume_id: @data)
-                    .left_join(:resumes_websites, resume_id: @data)
-                    .left_join(:works, resume_orm_id: @data)
-                    .where(identifier: identifier)
-                    .first
+          .left_join(:resumes_certifications, resume_orm_id: @data)
+          .left_join(:resumes_educations, resume_orm_id: @data)
+          .left_join(:emails, resume_orm_id: @data)
+          .left_join(:phones, resume_orm_id: @data)
+          .left_join(:resumes_sections, resume_orm_id: @data)
+          .left_join(:resumes_skills, resume_orm_id: @data)
+          .left_join(:resumes_languages, resume_orm_id: @data)
+          .left_join(:resumes_websites, resume_orm_id: @data)
+          .left_join(:works, resume_orm_id: @data)
+          .where(Sequel.lit("`resumes`.`identifier` = '#{identifier}'"))
+          .first
         rebuild_entity(db_resume)
       end
 
@@ -61,6 +61,7 @@ module Jobify
 
         Entity::Resume.new(
           db_record.to_hash.merge(
+            id: db_record.id,
             certifications: Certifications.rebuild_many(db_record.certifications),
             education: Educations.rebuild_many(db_record.education),
             emails: Emails.rebuild_many(db_record.emails),
