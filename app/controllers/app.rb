@@ -49,6 +49,7 @@ module Jobify
               .find_full_resume(identifier)
 
             view 'formats', locals: { identifier: resume.identifier }
+
           end
         end
       end
