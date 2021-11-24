@@ -54,23 +54,19 @@ module Jobify
         end
 
         def raw_location
-          @data['rawInput']
-        end
-
-        def dates
-          @data['dates']
+          @data['location']['rawInput'] unless @data['location'].nil?
         end
 
         def starting_date
-          dates['startDate']
+          @data['dates']['startDate'] unless @data['dates'].nil?
         end
 
         def end_date
-          dates['endDate']
+          @data['dates']['endDate'] unless @data['dates'].nil?
         end
 
         def months_in_position
-          dates['monthsInPosition']
+          @data['dates']['monthsInPosition'] unless @data['dates'].nil?
         end
 
         def description

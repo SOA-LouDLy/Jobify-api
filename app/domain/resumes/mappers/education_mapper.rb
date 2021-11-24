@@ -55,10 +55,6 @@ module Jobify
           @data['location']['rawInput'] unless @data['location'].nil?
         end
 
-        def dates
-          @data['dates']
-        end
-
         def starting_date
           @data['dates']['startDate'] unless @data['location'].nil?
         end
