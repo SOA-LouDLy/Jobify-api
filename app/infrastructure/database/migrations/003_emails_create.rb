@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'sequel'
+require_relative 'resumes'
 
 Sequel.migration do
   change do
