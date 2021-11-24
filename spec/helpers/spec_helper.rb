@@ -14,6 +14,6 @@ require 'webmock'
 require_relative '../../init'
 FILE = 'spec/resume.pdf'
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
-RESUME_TOKEN = CONFIG['RESUME_TOKEN']
+RESUME_TOKEN = Jobify::App.config.RESUME_TOKEN
 CORRECT = YAML.safe_load(File.read('spec/fixtures/resume_results.yml'))
 DATA = CORRECT['data']
