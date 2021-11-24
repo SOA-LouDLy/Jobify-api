@@ -53,7 +53,7 @@ namespace :db do
       puts 'Do not damage production database!'
       return
     end
-
+    require_relative 'spec/helpers/database_helper'
     DatabaseHelper.wipe_database
   end
 
