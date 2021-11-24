@@ -30,10 +30,11 @@ module Jobify
           .left_join(:resumes_languages, resume_orm_id: @data)
           .left_join(:resumes_websites, resume_orm_id: @data)
           .left_join(:works, resume_orm_id: @data)
-          .where(Sequel.lit("`resumes`.`identifier` = '#{identifier}'"))
+          .where(identifier: identifier)
           .first
         rebuild_entity(db_resume)
       end
+      # .where(Sequel.lit("`resumes`.`identifier` = '#{identifier}'"))
 
       def self.find(entity)
         find_identifier(entity.identifier)
