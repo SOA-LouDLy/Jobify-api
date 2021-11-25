@@ -38,6 +38,10 @@ module Jobify
         end
       end
 
+      def error
+        HTTP_ERROR[code]
+      end
+
       # Allow HTTP posts
       class AffindaClient
         include HTTMultiParty

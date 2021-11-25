@@ -28,16 +28,19 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+# gem 'pg'
+# end
 
 # Testing
 group :test do
+  gem 'headless', '~> 2.3'
   gem 'minitest', '~> 5.0'
   gem 'minitest-rg', '~> 5.0'
   gem 'simplecov', '~> 0'
   gem 'vcr', '~> 6.0'
+  gem 'watir', '~> 7.0'
+  gem 'webdrivers', '~> 5.0'
   gem 'webmock', '~> 3.0'
 end
 
