@@ -17,6 +17,8 @@ module Jobify
     plugin :halt
     plugin :flash
 
+    use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
+
     route do |routing|
       routing.assets # load CSS
       routing.public
@@ -28,7 +30,8 @@ module Jobify
         session[:watching] ||= []
 
         resumes = Jobify::Repository::For.klass(Entity::Resume)
-          .find_identifier(session[:watching])
+          .find_full_identifiers(session[:watching])
+          
 
         session[:watching] = resumes.map(&:identifier)
 
@@ -38,7 +41,7 @@ module Jobify
 
         view 'home', locals: { resumes: resumes }
       end
-      routing.on 'formats' do
+      routing.on 'formats' do 
         routing.is do
           # Form Post to /job/
           routing.post do
@@ -52,7 +55,7 @@ module Jobify
             warn "Uploading file, original name #{name.inspect}"
             # resume = Affinda::ResumeMapper.new(App.config.RESUME_TOKEN).resume(tmpfile)
             # Add resume to db
-
+            
             resume = Repository::For.klass(Entity::Resume)
               .find_full_resume(identifier)
 
