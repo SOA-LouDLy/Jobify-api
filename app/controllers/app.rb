@@ -16,6 +16,8 @@ module Jobify
                            formats: 'formats.css' }, js: 'table_row_click.js'
     plugin :halt
     plugin :flash
+    plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
+    #plugin :render, engine: 'slim', views: 'app/presentation/views_html'
 
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
 
@@ -53,29 +55,22 @@ module Jobify
               # return slim(:formats)
             end
             warn "Uploading file, original name #{name.inspect}"
-            # resume = Affinda::ResumeMapper.new(App.config.RESUME_TOKEN).resume(tmpfile)
+            resume = Affinda::ResumeMapper.new(App.config.RESUME_TOKEN).resume(tmpfile)
             # Add resume to db
             
-            resume = Repository::For.klass(Entity::Resume)
-              .find_full_resume(identifier)
+            #resume = Repository::For.klass(Entity::Resume)
+              #.find_full_resume(identifier)
 
-            unless resume
+           
 
-              begin
-                resume = Affinda::ResumeMapper.new(App.config.RESUME_TOKEN).resume(tmpfile)
-              rescue StandardError
-                flash[:error] = 'Could not upload the resume'
-                routing.redirect '/'
-              end
-
-              # Add project to database
+              # Add  to database
               begin
                 Repository::For.entity(resume).create(resume)
               rescue StandardError => e
                 puts e.backtrace.join("\n")
                 flash[:error] = 'Having trouble accessing the database'
               end
-            end
+            
             routing.redirect "/formats/#{resume.identifier}"
           end
         end

@@ -43,9 +43,7 @@ module Jobify
       attribute :identifier,                  Strict::String
 
 
-      def identifier 
-        "#{identifier}"
-      end
+      
 
       def to_attr_hash
         to_hash.reject do |key, _|
