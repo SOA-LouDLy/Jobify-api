@@ -42,9 +42,6 @@ module Jobify
       attribute :works,                       Array.of(Work).optional
       attribute :identifier,                  Strict::String
 
-
-      
-
       def to_attr_hash
         to_hash.reject do |key, _|
           %i[id certifications education emails phone_numbers sections

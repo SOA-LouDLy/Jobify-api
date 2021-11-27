@@ -17,7 +17,7 @@ module Jobify
     plugin :halt
     plugin :flash
     plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
-    #plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    # plugin :render, engine: 'slim', views: 'app/presentation/views_html'
 
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
 
@@ -33,17 +33,14 @@ module Jobify
 
         resumes = Jobify::Repository::For.klass(Entity::Resume)
           .find_full_identifiers(session[:watching])
-          
 
         session[:watching] = resumes.map(&:identifier)
 
-        if resumes.none?
-          flash.now[:notice] = 'Upload a resume to get started.'
-        end
+        flash.now[:notice] = 'Upload a resume to get started.' if resumes.none?
 
         view 'home', locals: { resumes: resumes }
       end
-      routing.on 'formats' do 
+      routing.on 'formats' do
         routing.is do
           # Form Post to /job/
           routing.post do
@@ -57,20 +54,18 @@ module Jobify
             warn "Uploading file, original name #{name.inspect}"
             resume = Affinda::ResumeMapper.new(App.config.RESUME_TOKEN).resume(tmpfile)
             # Add resume to db
-            
-            #resume = Repository::For.klass(Entity::Resume)
-              #.find_full_resume(identifier)
 
-           
+            # resume = Repository::For.klass(Entity::Resume)
+            # .find_full_resume(identifier)
 
-              # Add  to database
-              begin
-                Repository::For.entity(resume).create(resume)
-              rescue StandardError => e
-                puts e.backtrace.join("\n")
-                flash[:error] = 'Having trouble accessing the database'
-              end
-            
+            # Add  to database
+            begin
+              Repository::For.entity(resume).create(resume)
+            rescue StandardError => e
+              puts e.backtrace.join("\n")
+              flash[:error] = 'Having trouble accessing the database'
+            end
+
             routing.redirect "/formats/#{resume.identifier}"
           end
         end
