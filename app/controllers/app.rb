@@ -65,7 +65,8 @@ module Jobify
               puts e.backtrace.join("\n")
               flash[:error] = 'Having trouble accessing the database'
             end
-
+            # Add new resume to watched set in cookies
+            session[:watching].insert(0, resume.identifier).uniq!
             routing.redirect "/formats/#{resume.identifier}"
           end
         end
