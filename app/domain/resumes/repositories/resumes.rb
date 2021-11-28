@@ -36,10 +36,9 @@ module Jobify
       end
       # .where(Sequel.lit("`resumes`.`identifier` = '#{identifier}'"))
 
-      def self.find_full_identifiers(full_identifiers)
-        full_identifiers.map do |fullidentifier|
-          identifier = fullidentifier
-          find_full_identifiers(identifier)
+      def self.find_full_identifiers(identifiers)
+        identifiers.map do |identifier|
+          find_full_resume(identifier)
         end.compact
       end
 
