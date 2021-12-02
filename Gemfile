@@ -11,6 +11,8 @@ gem 'rake'
 gem 'puma', '~> 5.5'
 gem 'roda', '~> 3.49'
 gem 'slim', '~> 4.1'
+gem 'rack', '~> 2' # 2.3 will fix delegateclass bug
+
 
 # Validation
 gem 'dry-struct', '~> 1.4'

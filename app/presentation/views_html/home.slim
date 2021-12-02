@@ -29,8 +29,7 @@ javascript:
                     type="file"
                     class="form-control"  
                     id='resume_upload' 
-                    accept="application/pdf,application/msword, 
-                    application/vnd.openxmlformats-officedocument.wordprocessingml.document" 
+                    accept="application/pdf"
                     name="file" 
                     required
                     }
@@ -48,13 +47,19 @@ javascript:
         tr
           th Names 
           th Profession 
+          th 
       tbody
-        - resumes.each.with_index do |resume, index|
-          tr class="table-row resume_row" data-href="format1/#{resume.identifier}" id="resume[#{index}].row"
+        - resumes.each do |resume|
+          tr class="table-row resume_row" data-href=resume.resume_link id="#{resume.index_str}.row"
             td id='td_resume_user_name'
-              span class="resume_table_name" id="resume[#{index}].name"
+              span class="resume_table_name" id="#{resume.index_str}.name"
                 = resume.name
             td id='td_resume_profession'
-              span class="resume_table_profession" id="resume[#{index}].profession"
+              span class="resume_table_profession" id="#{resume.index_str}.profession"
                 = resume.profession
+            td id='delete_resume'
+              form role='form' method='post' action=resume.resume_link
+                input type='hidden' name='_method' value='delete' 
+                button type="submit" class="btn btn-sm btn-link" id="#{resume.index_str}.delete"
+                  i class="fas fa-trash-alt"
 

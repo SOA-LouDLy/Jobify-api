@@ -18,51 +18,43 @@ html
   body
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       a.navbar-brand.mb-0.px-3 href="/"
-        h2
+        h2 id="main-header"
           | Jobify
     .A4
       .analysis 
-      h2.text-center.mt-3
+      h2.text-center.mt-3 id="second-header"
         | Full Analysis of Resume 
       br/
       ul.list-group.list-group-flush.px-3.nice
-        - arr = analysis.split("\n")
-        - score = arr.pop.to_i
+        - score = analysis.score
+        - arr = analysis.splitting
         - arr&.each do |line|
           li.list-group-item
             = line
-      h3.mr-3.right style="text-align:right;" 
+      h3.mr-3.right style="text-align:right;" id="final-score"
         | Final Score: 
         = score
-      - if score >= 90
-        p.bigger style="text-align:right;" &#128588;
-      - if score >= 80 and score < 90
-        p.bigger style="text-align:right;" &#128077;
-      - if score >= 70 and score < 80
-        p.bigger style="text-align:right;" &#128578;
-      - if score >= 60 and score < 70
-        p.bigger style="text-align:right;" &#128549;
-      - if score < 60
-        p.bigger style="text-align:right;" &#128557;
+        p.bigger style="text-align:right;" id="scoring-text"
+           = analysis.scoring_message
         
       .sheet
         .two-column.resume
           section.resume__section.resume__header
             .resume__content
               h1 
-                = resume.name
+                = analysis.name
               .info-item
                 span.info-label
                   i.fa.fa-location-arrow
                 span.info-text
-                  = resume.location
-              - resume.emails.each do |email|
+                  = analysis.location
+              - analysis.emails.each do |email|
                 .info-item
                   span.info-label
                     i.fa.fa-envelope
                   span.info-text 
                      = email.email
-              - resume.phone_numbers.each do |phone|
+              - analysis.phone_numbers.each do |phone|
                 .info-item
                   span.info-label
                     i.fa.fa-phone
@@ -79,13 +71,13 @@ html
                   .other
                     .other-info
                       p
-                        = resume.summary[0..150]
+                        = analysis.summary[0..150]
               section.resume__section.resume__experience
                 .resume__content
                   .resume__section-title
                     i.fa.fa-briefcase
                     h2 Employment History
-                  - resume.works.each do | work |
+                  - analysis.works.each do | work |
                     .xp-item(style='margin-bottom: 1em')
                       .xp-job(style='margin-bottom: 1em')
                         = work.job_title
@@ -105,7 +97,7 @@ html
                   .resume__section-title
                     i.fas.fa-university
                     h2 Education
-                  - resume.education.each do | education |
+                  - analysis.education.each do | education |
                     .xp-item(style='margin-bottom: 0.5em')
                       .xp-job(style='margin-bottom: 0.5em')
                         = education.accreditation
@@ -127,7 +119,7 @@ html
                     i.fa.fa-align-center
                     h2 Skills
                   .resume__text
-                    - resume.skills.each do |skill|
+                    - analysis.skills.each do |skill|
                       .extra
                         .extra-info
                           = skill.name
@@ -139,19 +131,12 @@ html
                   .resume__section-title
                     i.fa.fa-globe
                     h2 Languages
-                  - resume.languages.each do |language|
+                  - analysis.languages.each do |language|
                     .extra
                       .extra-info 
                         = language.name
                       .extra-details
                         .extra-details__progress(style='width:100%')
-  javascript:
-        $( "#analysis_resume" ).click(function() {
-          $(".analysis").show()
-        });
-        $( ".show_resume" ).click(function(){
-          $(".analysis").hide()
-        })
 
                 
 

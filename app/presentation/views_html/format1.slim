@@ -39,82 +39,67 @@ html
     
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       a.navbar-brand.mb-0.px-3 href="/"
-        h2
+        h2 id="main-header"
           | Jobify
       a#analysis_resume
-        h3| Analysis
+        h3 id="second-header"| Analysis
     .rela-block.analysis
       i.fas.fa-long-arrow-alt-left.bigger.px-3.show_resume
-      h2.text-center.mt-3
+      h2.text-center.mt-3 id="analysis-title"
         | Full Analysis of Resume 
       br/
       ul.list-group.list-group-flush.px-3.nice
-        - arr = analysis.split("\n")
-        - score = arr.pop.to_i
+        - score = analysis.score
+        - arr = analysis.splitting
         - arr&.each do |line|
           li.list-group-item
             = line
-      h3.mr-3.right style="text-align:right;" 
+      h3.mr-3.right style="text-align:right;" id="final-score"
         | Final Score: 
         = score
       br/ 
-      - if score >= 90
-        p.bigger.right style="text-align:right;" &#128588;
-        br/ 
-      - if score >= 80 and score < 90
-        p.bigger.right style="text-align:right;" &#128077;
-        br/
-      - if score >= 70 and score < 80
-        p.bigger.right style="text-align:right;" &#128578;
-        br/
-      - if score >= 60 and score < 70
-        p.bigger.right style="text-align:right;" &#128549;
-        br/
-      - if score < 60
-        p.bigger.right style="text-align:right;" &#128557;
-        br/
-        
-        
+      p.bigger.right style="text-align:right;" id="scoring_text"
+        = analysis.scoring_message  
+      br/ 
     .rela-block.page
       .rela-block.top-bar
         .caps.name
           .abs-center 
-          = resume.name
+          = analysis.name
       .side-bar
         p 
-          strong = resume.location
+          strong = analysis.location
         p 
-          strong = resume.country
-        - resume.phone_numbers.each do |phone|
+          strong = analysis.country
+        - analysis.phone_numbers.each do |phone|
           p 
             strong = phone.number
-        - resume.emails.each do |email|
+        - analysis.emails.each do |email|
           p 
             strong = email.email
         br/
         p.rela-block.social.linked-in 
-          = resume.linkedin
+          = analysis.linkedin
         p.rela-block.caps.side-header Education
-        - resume.education.each do |education|
+        - analysis.education.each do |education|
           p.rela-block.list-thing
-            = puts education
             = education.organization 
           p.rela-block.list-thing
             strong = "#{education.starting_date} -- #{education.end_date}"
         p.rela-block.caps.side-header Skills
-        - resume.skills.each.with_index do |skill, index| 
+        - analysis.skills.each.with_index do |skill, index| 
           p.rela-block.list-thing 
             = skill.name
             - break if index > 7
       .rela-block.content-container
         h2.rela-block.caps.title 
-          =resume.profession
+          =analysis.profession
         .rela-block.separator
         .rela-block.caps.greyed Profile
         p.long-margin 
-          = resume.summary
+          = analysis.summary
         .rela-block.caps.greyed Experience
-        - resume.works.each do |work|
+        - analysis.works.each do |work|
           h3
             = work.job_title
           p.light 
@@ -126,7 +111,7 @@ html
                   = line
         .rela-block.caps.greyed Language
         ul 
-          - resume.languages.each do |language|
+          - analysis.languages.each do |language|
             li
               = language.name
     javascript:
