@@ -12,11 +12,6 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
-desc 'run tests'
-task :spec do
-  sh 'ruby spec/gateway_careerjet_spec.rb'
-end
-
 desc 'Keep rerunning tests upon changes'
 task :respec do
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
@@ -25,7 +20,7 @@ end
 desc 'Run acceptance tests'
 task :spec_accept do
   puts 'NOTE: run `rake run:test` in another process'
-  sh 'ruby spec/tests/acceptance/acceptance_spec_.rb'
+  sh 'ruby spec/tests/acceptance/acceptance_spec.rb'
 end
 
 desc 'Keep restarting web app upon changes'

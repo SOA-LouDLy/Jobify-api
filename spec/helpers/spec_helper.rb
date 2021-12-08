@@ -17,6 +17,7 @@ CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 RESUME_TOKEN = Jobify::App.config.RESUME_TOKEN
 CORRECT = YAML.safe_load(File.read('spec/fixtures/resume_results.yml'))
 DATA = CORRECT['data']
+IDENTIFIER = 'zmIHbIQB'
 
 def homepage
   Jobify::App.config.APP_HOST
