@@ -31,14 +31,18 @@ module Jobify
         # Get Cookie Viewwer's
         session[:watching] ||= []
 
-        resumes = Jobify::Repository::For.klass(Entity::Resume)
-          .find_full_identifiers(session[:watching])
+        result = Service::ListResumes.new.call(session[:watching])
+        if result.failure?
+          viewable_resume = []
+        else
+          resumes = result.value!
+          session[:watching] = resumes.map(&:identifier)
+          viewable_resume = Views::ResumesList.new(resumes)
+        end
 
-        session[:watching] = resumes.map(&:identifier)
-
-        viewable_resume = Views::ResumesList.new(resumes)
         view 'home', locals: { resumes: viewable_resume }
       end
+
       routing.on 'formats' do
         routing.is do
           # Form Post to /formats/
@@ -46,17 +50,12 @@ module Jobify
             unless routing[:file] &&
                    (tmpfile = routing[:file][:tempfile]) &&
                    (name = routing[:file][:filename])
-              response.status = 400
-              # return slim(:formats)
             end
             warn "Uploading file, original name #{name.inspect}"
-            resume = Affinda::ResumeMapper.new(App.config.RESUME_TOKEN).resume(tmpfile)
+            resume_made = Service::AddResume.new.call(tmpfile)
+            routing.redirect '/' if resume_made.failure?
 
-            begin
-              Repository::For.entity(resume).create(resume)
-            rescue StandardError => e
-              puts e.backtrace.join("\n")
-            end
+            resume = resume_made.value!
             # Add new resume to watched set in cookies
             session[:watching].insert(0, resume.identifier).uniq!
             routing.redirect "/formats/#{resume.identifier}"
@@ -66,14 +65,10 @@ module Jobify
         routing.on String do |identifier|
           # GET /formats/{identifier}
           routing.get do
-            begin
-              resume = Jobify::Repository::For.klass(Entity::Resume)
-                .find_full_resume(identifier)
+            resume_made = Service::GetResume.new.call(identifier)
+            routing.redirect '/' if resume_made.failure?
 
-              routing.redirect '/' if resume.nil?
-            rescue StandardError
-              routing.redirect '/'
-            end
+            resume = resume_made.value!
 
             view 'formats', locals: { identifier: resume.identifier }
           end
@@ -87,35 +82,27 @@ module Jobify
 
             routing.redirect '/'
           end
-          begin
-            resume = Jobify::Repository::For.klass(Entity::Resume)
-              .find_full_resume(identifier)
-            analysis = Mapper::Analysis.new(resume).analysis
+          resume_made = Service::GetResume.new.call(identifier)
+          routing.redirect '/' if resume_made.failure?
+          resume = resume_made.value!
+          analysis = Mapper::Analysis.new(resume).analysis
 
-            routing.redirect '/' if resume.nil?
+          routing.redirect '/' if analysis.nil?
 
-            routing.redirect '/' if analysis.nil?
-          rescue StandardError
-            routing.redirect '/'
-          end
           resume_analysis = Views::ResumeAnalysis.new(resume, analysis)
           view 'format1', locals: { analysis: resume_analysis }
         end
 
         routing.on 'format2' do
           routing.on String do |identifier|
-            begin
-              resume = Jobify::Repository::For.klass(Entity::Resume)
-                .find_full_resume(identifier)
-              analysis = Mapper::Analysis.new(resume).analysis
+            resume_made = Service::GetResume.new.call(identifier)
+            routing.redirect '/' if resume_made.failure?
 
-              routing.redirect '/' if resume.nil?
+            resume = resume_made.value!
+            analysis = Mapper::Analysis.new(resume).analysis
 
-              routing.redirect '/' if analysis.nil?
-            rescue StandardError
-              flash[:error] = 'Having trouble accessing the database'
-              routing.redirect '/'
-            end
+            routing.redirect '/' if analysis.nil?
+
             resume_analysis = Views::ResumeAnalysis.new(resume, analysis)
             view 'format2', locals: { analysis: resume_analysis }
           end
