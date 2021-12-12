@@ -1,19 +1,11 @@
 # frozen_string_literal: true
 
 require 'roda'
-require 'slim'
-require 'slim/include'
 
 module Jobify
   # Web App
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :public, root: 'app/presentation/public'
-    plugin :assets, path: 'app/presentation/assets',
-                    css: { format1: 'format1.css',
-                           format2: 'format2.css',
-                           layout: 'style.css',
-                           formats: 'formats.css' }, js: 'table_row_click.js'
     plugin :halt
     plugin :flash
     plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
@@ -22,89 +14,79 @@ module Jobify
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
 
     route do |routing|
-      routing.assets # load CSS
+      response['Content-Type'] = 'application/json'
       routing.public
       # GET /
       routing.root do
-        # view 'home'
+        message = "Jobify API v1 at /api/v1/ in #{App.environment} mode"
 
-        # Get Cookie Viewwer's
-        session[:watching] ||= []
+        result_response = Representer::HttpResponse.new(
+          Response::ApiResult.new(status: :ok, message: message)
+        )
 
-        result = Service::ListResumes.new.call(session[:watching])
-        if result.failure?
-          viewable_resume = []
-        else
-          resumes = result.value!
-          session[:watching] = resumes.map(&:identifier)
-          viewable_resume = Views::ResumesList.new(resumes)
-        end
-
-        view 'home', locals: { resumes: viewable_resume }
+        response.status = result_response.http_status_code
+        result_response.to_json
       end
 
-      routing.on 'formats' do
-        routing.is do
-          # Form Post to /formats/
-          routing.post do
-            unless routing[:file] &&
-                   (tmpfile = routing[:file][:tempfile]) &&
-                   (name = routing[:file][:filename])
+      routing.on 'api/v1' do
+        routing.on 'formats' do
+          routing.on String do |identifier|
+            # GET /formats/{identifier}
+            routing.get do
+              resume_made = Service::GetResume.new.call(identifier)
+              if resume_made.failure?
+                failed = Representer::HttpResponse.new(resume_made.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(resume_made.value!)
+              response.status = http_response.http_status_code
+
+              # Representer::NameOfTheClass.new(
+              #  result.value!.message
+              # ).to_json
             end
-            warn "Uploading file, original name #{name.inspect}"
-            resume_made = Service::AddResume.new.call(tmpfile)
-            routing.redirect '/' if resume_made.failure?
-
-            resume = resume_made.value!
-            # Add new resume to watched set in cookies
-            session[:watching].insert(0, resume.identifier).uniq!
-            routing.redirect "/formats/#{resume.identifier}"
-          end
-        end
-
-        routing.on String do |identifier|
-          # GET /formats/{identifier}
-          routing.get do
-            resume_made = Service::GetResume.new.call(identifier)
-            routing.redirect '/' if resume_made.failure?
-
-            resume = resume_made.value!
-
-            view 'formats', locals: { identifier: resume.identifier }
           end
         end
       end
 
       routing.on 'format1' do
         routing.on String do |identifier|
-          routing.delete do
-            session[:watching].delete(identifier)
-
-            routing.redirect '/'
-          end
           resume_made = Service::GetResume.new.call(identifier)
-          routing.redirect '/' if resume_made.failure?
+          if resume_made.failure?
+            failed = Representer::HttpResponse.new(resume_made.failure)
+            routing.halt failed.http_status_code, failed.to_json
+          end
+
           resume = resume_made.value!
           analysis = Mapper::Analysis.new(resume).analysis
 
-          routing.redirect '/' if analysis.nil?
+          if analysis.nil?
+            failed = Representer::HttpResponse.new(analysis.nil)
+            routing.halt failed.http_status_code, failed.to_json
+          end
 
-          resume_analysis = Views::ResumeAnalysis.new(resume, analysis)
-          view 'format1', locals: { analysis: resume_analysis }
+          http_response = Representer::ResumeAnalysis.new(resume, analysis)
+          response.status = http_response.http_status_code
         end
 
         routing.on 'format2' do
           routing.on String do |identifier|
             resume_made = Service::GetResume.new.call(identifier)
-            routing.redirect '/' if resume_made.failure?
-
+            if resume_made.failure?
+              failed = Representer::HttpResponse.new(resume_made.failure)
+              routing.halt failed.http_status_code, failed.to_json
+            end
             resume = resume_made.value!
             analysis = Mapper::Analysis.new(resume).analysis
 
-            routing.redirect '/' if analysis.nil?
+            if analysis.nil?
+              failed = Representer::HttpResponse.new(analysis.nil)
+              routing.halt failed.http_status_code, failed.to_json
+            end
 
-            resume_analysis = Views::ResumeAnalysis.new(resume, analysis)
-            view 'format2', locals: { analysis: resume_analysis }
+            http_response = Representer::ResumeAnalysis.new(resume, analysis)
+            response.status = http_response.http_status_code
           end
         end
       end
