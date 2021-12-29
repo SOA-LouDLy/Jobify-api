@@ -14,24 +14,26 @@ module Jobify
 
       private
 
-      def upload_resume(input, api: Jobify::Affinda::Api)
-        resume = resume_from_affinda(input, api)
+      DB_ERR_MSG = 'Having trouble accessing the database'
+
+      def upload_resume(input)
+        resume = resume_from_affinda(input)
         Success(resume)
       rescue StandardError => e
-        Failure(e.to_s)
+        Failure(Response::ApiResult.new(status: :not_found, message: e.to_s))
       end
 
       def store_resume(input)
         resume = Repository::For.entity(input).create(input)
-        Success(resume)
+        Success(Response::ApiResult.new(status: :created, message: resume))
       rescue StandardError => e
         puts e.backtrace.join("\n")
-        Failure('Having trouble accessing the database')
+        Failure(Response::ApiResult.new(status: :internal_error, message: DB_ERR_MSG))
       end
 
-      def resume_from_affinda(input, api)
+      def resume_from_affinda(input)
         Affinda::ResumeMapper
-          .new(App.config.RESUME_TOKEN, api)
+          .new(App.config.RESUME_TOKEN)
           .resume(input)
       rescue StandardError
         raise 'Free parsing over'

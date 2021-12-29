@@ -1,113 +1,86 @@
 # frozen_string_literal: true
 
 require 'roda'
-require 'slim'
-require 'slim/include'
-
+require 'base64'
+require 'json'
 module Jobify
   # Web App
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
-    plugin :public, root: 'app/presentation/public'
-    plugin :assets, path: 'app/presentation/assets',
-                    css: { format1: 'format1.css',
-                           format2: 'format2.css',
-                           layout: 'style.css',
-                           formats: 'formats.css' }, js: 'table_row_click.js'
     plugin :halt
     plugin :flash
     plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
-    # plugin :render, engine: 'slim', views: 'app/presentation/views_html'
-
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs)
 
+    # rubocop:disable Metrics/BlockLength
     route do |routing|
-      routing.assets # load CSS
-      routing.public
+      response['Content-Type'] = 'application/json'
+
       # GET /
       routing.root do
-        # view 'home'
+        message = "Jobify API v1 at /api/v1/ in #{App.environment} mode"
 
-        # Get Cookie Viewwer's
-        session[:watching] ||= []
+        result_response = Representer::HttpResponse.new(
+          Response::ApiResult.new(status: :ok, message: message)
+        )
 
-        result = Service::ListResumes.new.call(session[:watching])
-        if result.failure?
-          viewable_resume = []
-        else
-          resumes = result.value!
-          session[:watching] = resumes.map(&:identifier)
-          viewable_resume = Views::ResumesList.new(resumes)
-        end
-
-        view 'home', locals: { resumes: viewable_resume }
+        response.status = result_response.http_status_code
+        result_response.to_json
       end
 
-      routing.on 'formats' do
-        routing.is do
-          # Form Post to /formats/
+      routing.on 'api/v1' do
+        routing.on 'resumes' do
           routing.post do
-            unless routing[:file] &&
-                   (tmpfile = routing[:file][:tempfile]) &&
-                   (name = routing[:file][:filename])
+            resume = JSON.parse(routing.params['body'])
+            resume_str = Base64.decode64(resume['pdf64'])
+            tmpfile = Tempfile.new(['', '.pdf'], encoding: 'ASCII-8BIT').tap { |f| f.write(resume_str) }
+            result = Service::AddResume.new.call(tmpfile)
+            if result.failure?
+              failed = Representer::HttpResponse.new(result.failure)
+              routing.halt failed.http_status_code, failed.to_json
             end
-            warn "Uploading file, original name #{name.inspect}"
-            resume_made = Service::AddResume.new.call(tmpfile)
-            routing.redirect '/' if resume_made.failure?
-
-            resume = resume_made.value!
-            # Add new resume to watched set in cookies
-            session[:watching].insert(0, resume.identifier).uniq!
-            routing.redirect "/formats/#{resume.identifier}"
+            http_response = Representer::HttpResponse.new(result.value!)
+            response.status = http_response.http_status_code
+            # routing.redirect "resumes/#{result.value!.message.identifier}"
+            Representer::Resume.new(result.value!.message).to_json
           end
-        end
 
-        routing.on String do |identifier|
-          # GET /formats/{identifier}
-          routing.get do
-            resume_made = Service::GetResume.new.call(identifier)
-            routing.redirect '/' if resume_made.failure?
-
-            resume = resume_made.value!
-
-            view 'formats', locals: { identifier: resume.identifier }
-          end
-        end
-      end
-
-      routing.on 'format1' do
-        routing.on String do |identifier|
-          routing.delete do
-            session[:watching].delete(identifier)
-
-            routing.redirect '/'
-          end
-          resume_made = Service::GetResume.new.call(identifier)
-          routing.redirect '/' if resume_made.failure?
-          resume = resume_made.value!
-          analysis = Mapper::Analysis.new(resume).analysis
-
-          routing.redirect '/' if analysis.nil?
-
-          resume_analysis = Views::ResumeAnalysis.new(resume, analysis)
-          view 'format1', locals: { analysis: resume_analysis }
-        end
-
-        routing.on 'format2' do
           routing.on String do |identifier|
-            resume_made = Service::GetResume.new.call(identifier)
-            routing.redirect '/' if resume_made.failure?
+            routing.get do
+              result = Service::AnalyseResume.new.call(identifier: identifier)
 
-            resume = resume_made.value!
-            analysis = Mapper::Analysis.new(resume).analysis
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
 
-            routing.redirect '/' if analysis.nil?
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
 
-            resume_analysis = Views::ResumeAnalysis.new(resume, analysis)
-            view 'format2', locals: { analysis: resume_analysis }
+              Representer::ResumeAnalysis.new(
+                result.value!.message
+              ).to_json
+            end
+          end
+
+          routing.is do
+            # GET /resumes?list={base64_json_array_of_resume_identifiers}
+            routing.get do
+              list_req = Request::EncodedResumeList.new(routing.params)
+              result = Service::ListResumes.new.call(list_request: list_req)
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::ResumesList.new(result.value!.message).to_json
+            end
           end
         end
       end
     end
   end
+  # rubocop:enable Metrics/BlockLength
 end

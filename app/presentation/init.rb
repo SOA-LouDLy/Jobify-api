@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-folders = %w[view_objects]
-folders.each do |folder|
-  require_relative "#{folder}/init.rb"
+infos = %w[responses representers]
+infos.each do |info|
+  require_relative "#{info}/init.rb"
 end
