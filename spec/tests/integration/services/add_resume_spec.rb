@@ -23,7 +23,7 @@ describe 'AddResume Service Integration Test' do
     it 'HAPPY: should be able to find and save remote resume to database' do
       # GIVEN: a valid resume
       resume = Jobify::Affinda::ResumeMapper
-        .new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+        .new(RESUME_TOKEN)
         .resume(FILE)
 
       # WHEN: the service is called with the resume

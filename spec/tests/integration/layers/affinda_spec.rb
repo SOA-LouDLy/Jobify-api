@@ -18,7 +18,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Resume information' do
     it 'HAPPY: should provide correct resume attributes' do
-      resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
 
       _(resume.name).must_equal DATA['name']['raw']
@@ -41,7 +41,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Education information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @educations_data = DATA['education'].map do |education|
         Jobify::Entity::Education.new(
@@ -77,7 +77,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Section information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @sections_data = DATA['sections'].map do |section|
         Jobify::Entity::Section.new(
@@ -103,7 +103,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Skill information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @skills_data = DATA['skills'].map do |skill|
         Jobify::Entity::Skill.new(
@@ -131,7 +131,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Work information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @work_data = DATA['workExperience'].map do |work|
         Jobify::Entity::Work.new(
@@ -171,7 +171,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Certification information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @certifications_data = DATA['certifications'].map do |certification|
         Jobify::Entity::Certification.new(
@@ -195,7 +195,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Website information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @websites_data = DATA['websites'].map do |website|
         Jobify::Entity::Website.new(
@@ -219,7 +219,7 @@ describe 'Tests Affinda API library' do
 
   describe 'Phone information' do
     before do
-      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      @resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       @phones_data = DATA['phoneNumbers'].map do |number|
         Jobify::Entity::Phone.new(
