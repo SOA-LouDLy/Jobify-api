@@ -22,7 +22,7 @@ describe 'Integration Tests of Affinda API and Database' do
 
     it 'HAPPY: should be able to save resume from resume to database' do
       resume = Jobify::Affinda::ResumeMapper
-        .new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+        .new(RESUME_TOKEN)
         .resume(FILE)
 
       rebuilt = Jobify::Repository::For.entity(resume).create(resume)

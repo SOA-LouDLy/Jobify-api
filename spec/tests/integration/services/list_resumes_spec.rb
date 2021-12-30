@@ -24,7 +24,7 @@ describe 'AddResume Service Integration Test' do
 
     it 'HAPPY: should return resumes that are being watched' do
       # GIVEN: a valid resume exists locally and is being watched
-      resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN, Jobify::Affinda::LocalApi)
+      resume = Jobify::Affinda::ResumeMapper.new(RESUME_TOKEN)
         .resume(FILE)
       db_resume = Jobify::Repository::For.entity(resume)
         .create(resume)
