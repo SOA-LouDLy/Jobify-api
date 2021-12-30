@@ -70,4 +70,55 @@ describe 'Test API routes' do
       _(res.links['self'].href).must_include '/api/v1/resumes'
     end
   end
+  describe 'Get Resumes List' do
+    it 'should successfully return resume lists' do
+      resume_made = Jobify::Service::AddResume.new.call(FILE)
+      identifier = resume_made.value!.message.identifier
+      list = [identifier]
+      encoded_list = Jobify::Request::EncodedResumeList.to_encoded(list)
+
+      get "/api/v1/resumes?list=#{encoded_list}"
+      _(last_response.status).must_equal 200
+      response = JSON.parse(last_response.body)
+      puts response
+      resumes = response['resumes']
+      _(resumes.count).must_equal 1
+      resume = resumes.first
+      _(resume['location']).must_equal '177 Great Portland Street, London W5W 6PQ'
+      _(resume['country']).must_equal 'United States'
+      _(resume['name']).must_equal 'CHRISTOPHER MORGAN'
+      _(resume['summary']).must_include 'Web Developer'
+      _(resume['certifications'][0].count).must_equal 2
+      _(resume['education'][0]['organization']).must_equal 'Columbia University'
+      _(resume['emails'][0]['email']).must_equal 'christoper.morgan@gmail.com'
+      _(resume['phone_numbers'][0]['number']).must_equal '+442076668555'
+      _(resume['works'].count).must_equal 1
+      _(resume['works'][0]['job_title']).must_include 'Web'
+      _(resume['works'][0]['organization']).must_include 'Luna'
+      _(resume['works'][0]['country']).must_equal 'United States'
+      _(resume['works'][0]['months_in_position']).must_equal 44
+      _(resume['works'][0]['description']).must_include 'Cooperate with designers'
+    end
+
+    it 'should return empty lists if none found' do
+      list = ['a1121w1w1']
+      encoded_list = Jobify::Request::EncodedResumeList.to_encoded(list)
+
+      get "/api/v1/resumes?list=#{encoded_list}"
+      _(last_response.status).must_equal 200
+
+      response = JSON.parse(last_response.body)
+      resumes = response['resumes']
+      _(resumes).must_be_kind_of Array
+      _(resumes.count).must_equal 0
+    end
+
+    it 'should return error if not list provided' do
+      get '/api/v1/resumes'
+      _(last_response.status).must_equal 400
+
+      response = JSON.parse(last_response.body)
+      _(response['message']).must_include 'list'
+    end
+  end
 end
