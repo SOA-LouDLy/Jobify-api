@@ -46,7 +46,7 @@ describe 'Test API routes' do
       pdf_str = File.read(tmpfile)
       pdf_encoded = Base64.encode64(pdf_str)
 
-      post 'api/v1/resumes', body: { 'pdf64' => pdf_encoded }.to_json
+      post 'api/v1/resumes', { 'pdf64' => pdf_encoded }.to_json, { 'CONTENT_TYPE' => 'application/json' }
 
       # puts JSON.parse last_response.body
 
@@ -88,7 +88,7 @@ describe 'Test API routes' do
       _(resume['country']).must_equal 'United States'
       _(resume['name']).must_equal 'CHRISTOPHER MORGAN'
       _(resume['summary']).must_include 'Web Developer'
-      _(resume['certifications'][0].count).must_equal 2
+      _(resume['certifications'][0].count).must_equal 1
       _(resume['education'][0]['organization']).must_equal 'Columbia University'
       _(resume['emails'][0]['email']).must_equal 'christoper.morgan@gmail.com'
       _(resume['phone_numbers'][0]['number']).must_equal '+442076668555'

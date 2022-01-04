@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'helpers/spec_helper'
-require_relative 'helpers/vcr_helper'
-
-require 'curb'
+require_relative '../../../helpers/spec_helper'
+require_relative '../../../helpers/vcr_helper'
 
 describe 'Tests Affinda API library' do
   VcrHelper.setup_vcr
@@ -204,10 +202,6 @@ describe 'Tests Affinda API library' do
         )
       end
       @websites = @resume.websites
-    end
-
-    it 'HAPPY: should recognize website' do
-      _(@websites[0]).must_be_kind_of Jobify::Entity::Website
     end
 
     it 'HAPPY: should verify website information' do

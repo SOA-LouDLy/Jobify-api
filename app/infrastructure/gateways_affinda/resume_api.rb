@@ -2,6 +2,8 @@
 
 require 'yaml'
 require 'http'
+require 'uri'
+require 'net/http'
 
 module Jobify
   module Affinda
@@ -14,7 +16,7 @@ module Jobify
       end
 
       def resume(file)
-        Request.new(@id, file).resume.parse
+        JSON.parse(Request.new(@id, file).resume)
       end
 
       # Sends POST request to Affinda API and GETs the response
@@ -25,34 +27,16 @@ module Jobify
         end
 
         def resume
-          http_response = HTTP.headers(
-            'Authorization' => "Bearer #{@key}"
-          ).post(API_RESUME_ROOT, form: {
-                   file: HTTP::FormData::File.new(@file)
-                 })
-          # puts http_response
-          Response.new(http_response).tap do |response|
-            raise(response.error) unless response.successful?
+          uri = URI.parse(API_RESUME_ROOT)
+          request = Net::HTTP::Post.new(uri)
+          request['Authorization'] = "Bearer #{@key}"
+          form_data = [['file', File.open(@file)]]
+          request.set_form form_data, 'multipart/form-data'
+          http_response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+            http.request(request)
           end
-        end
-      end
-
-      # Decorates HTTP responses from Affinda with success/error
-      class Response < SimpleDelegator
-        Unauthorized = Class.new(StandardError)
-        NotFound = Class.new(StandardError)
-
-        HTTP_ERROR = {
-          401 => Unauthorized,
-          404 => NotFound
-        }.freeze
-
-        def successful?
-          !HTTP_ERROR.keys.include?(code)
-        end
-
-        def error
-          HTTP_ERROR[code]
+          http_response.body
+          # return http_response.body unless http_response.code != 200
         end
       end
     end

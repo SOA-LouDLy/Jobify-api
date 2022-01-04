@@ -30,7 +30,7 @@ module Jobify
       routing.on 'api/v1' do
         routing.on 'resumes' do
           routing.post do
-            resume = JSON.parse(routing.params['body'])
+            resume = JSON.parse(routing.body.read)
             resume_str = Base64.decode64(resume['pdf64'])
             tmpfile = Tempfile.new(['', '.pdf'], encoding: 'ASCII-8BIT').tap { |f| f.write(resume_str) }
             result = Service::AddResume.new.call(tmpfile)

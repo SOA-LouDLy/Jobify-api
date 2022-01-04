@@ -33,7 +33,7 @@ describe 'AddResume Service Integration Test' do
       _(resume_made.success?).must_equal true
 
       # ..and provide a project entity with the right details
-      rebuilt = resume_made.value!
+      rebuilt = resume_made.value!.message
 
       _(rebuilt.identifier).must_equal(resume.identifier)
       _(rebuilt.name).must_equal(resume.name)
