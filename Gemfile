@@ -18,6 +18,10 @@ gem 'dry-monads', '~> 1.4'
 gem 'dry-transaction', '~> 0.13'
 gem 'dry-validation', '~> 1.7'
 
+# PRESENTATION LAYER
+gem 'multi_json'
+gem 'roar'
+
 # Validation
 gem 'dry-struct', '~> 1.4'
 gem 'dry-types', '~> 1.5'
