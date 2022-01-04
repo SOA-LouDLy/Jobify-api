@@ -12,7 +12,7 @@ module Jobify
       include Roar::JSON
 
       property :resume, extend: Representer::Resume, class: OpenStruct
-      property :report, extend: Representer::Fields, class: OpenStruct
+      property :analysis
     end
   end
 end
