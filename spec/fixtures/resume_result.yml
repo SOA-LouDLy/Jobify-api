@@ -7,9 +7,9 @@ data:
   education:
   - organization: Columbia University
     accreditation:
-      education: Bachelor of Science
-      educationLevel: bachelors
-      inputStr: 'Bachelor of Science: Computer Information Systems'
+      education: Computer Information Systems
+      educationLevel:
+      inputStr: Computer Information Systems
       matchStr: ''
     grade:
     location:
@@ -245,6 +245,13 @@ data:
       position:
     - section: Training/Certifications
       position:
+  - name: Simple
+    lastUsed: '2019-05-01'
+    numberOfMonths: 44
+    type: hard_skill
+    sources:
+    - section: WorkExperience
+      position: 0
   - name: Front End (Software Engineering)
     lastUsed: '2019-05-01'
     numberOfMonths: 44
@@ -283,12 +290,22 @@ data:
       monthsInPosition: 44
       isCurrent: false
     jobDescription: " Cooperate with designers to create clean interfaces and simple,
-      intuitive interactions and experiences. \nDevelop project concepts and maintain
-      optimal workflow. \nWork with senior developer to manage large, complex design
-      projects for corporate clients. \nComplete detailed programming and development
+      intuitive interactions and experiences. \n•Develop project concepts and maintain
+      optimal workflow. \n•Work with senior developer to manage large, complex design
+      projects for corporate clients. \n•Complete detailed programming and development
       tasks for front end public and internal websites as well as challenging back-end
-      server code. \nCarry out quality assurance tests to discover errors and optimize
+      server code. \n•Carry out quality assurance tests to discover errors and optimize
       usability. "
+    occupation:
+      jobTitle: Web Developer
+      jobTitleNormalized: Web Developer
+      classification:
+        socCode: 2134
+        title: 'Programmers and software development professionals '
+        minorGroup: Information Technology Professionals
+        subMajorGroup: SCIENCE, RESEARCH, ENGINEERING AND TECHNOLOGY PROFESSIONALS
+        majorGroup: PROFESSIONAL OCCUPATIONS
+      managementLevel: Low
   headShot:
   isResumeProbability: 86
   rawText: |-
@@ -300,10 +317,10 @@ data:
     Languages Spanish – C2 Chinese – A1
     Certifications PHP Framework (certificate): Zend, Codeigniter, Symfony. Programming Languages: JavaScript, HTML5, PHP OOP, CSS, SQL, MySQL.
 meta:
-  identifier: ogPCnDmF
+  identifier: JvONkyKU
   ready: true
   failed: false
-  readyDt: '2021-11-19T18:08:05.728165Z'
+  readyDt: '2022-01-04T15:07:26.763050Z'
   fileName:
   expiryTime:
 error:
