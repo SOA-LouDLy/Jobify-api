@@ -233,7 +233,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   minitest-rg (~> 5.0)
   multi_json
-  pg
+  pg (~> 1.2)
   pry
   puma (~> 5.5)
   rack (~> 2)
