@@ -31,9 +31,12 @@ module Jobify
         routing.on 'resumes' do
           routing.post do
             resume = JSON.parse(routing.body.read)
-            resume_str = Base64.decode64(resume['pdf64'])
-            tmpfile = Tempfile.new(['', '.pdf'], encoding: 'ASCII-8BIT').tap { |f| f.write(resume_str) }
-            result = Service::AddResume.new.call(tmpfile)
+            request_id = [request.env, request.path, Time.now.to_f].hash
+
+            result = Jobify::Service::AddResume.new.call(
+              resume: resume,
+              request_id: request_id
+            )
             if result.failure?
               failed = Representer::HttpResponse.new(result.failure)
               routing.halt failed.http_status_code, failed.to_json
@@ -41,7 +44,7 @@ module Jobify
             http_response = Representer::HttpResponse.new(result.value!)
             response.status = http_response.http_status_code
             # routing.redirect "resumes/#{result.value!.message.identifier}"
-            Representer::Resume.new(result.value!.message).to_json
+            Representer::UploadRequest.new(result.value!.message).to_json
           end
 
           routing.on String do |identifier|

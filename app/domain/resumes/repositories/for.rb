@@ -10,6 +10,7 @@ require_relative 'sections'
 require_relative 'skills'
 require_relative 'websites'
 require_relative 'works'
+require_relative 'resume_files'
 
 module Jobify
   module Repository
@@ -24,7 +25,8 @@ module Jobify
         Entity::Skill         => Skills,
         Entity::Website       => Websites,
         Entity::Work          => Works,
-        Entity::Resume        => Resumes
+        Entity::Resume        => Resumes,
+        Entity::ResumeFile    => ResumeFiles
       }.freeze
 
       def self.klass(entity_klass)

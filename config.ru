@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 require_relative './init'
-# Rack::Utils.key_space_limit = 262_144
+
+use Faye::RackAdapter, mount: '/faye', timeout: 25
 run Jobify::App.freeze.app

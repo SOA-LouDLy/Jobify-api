@@ -29,6 +29,12 @@ gem 'dry-types', '~> 1.5'
 # Networking
 gem 'http', '~> 5.0'
 
+# Asynchronicity
+gem 'concurrent-ruby', '~> 1.1'
+gem 'aws-sdk-sqs', '~> 1.48'
+gem 'shoryuken', '~> 5.3'
+gem 'faye' , '~> 1'
+
 # Database
 gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
