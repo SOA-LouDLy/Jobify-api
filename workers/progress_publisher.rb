@@ -15,7 +15,7 @@ module ResumeUpload
       print "[post: #{@config.API_HOST}/faye] "
       response = HTTP.headers(content_type: 'application/json')
         .post(
-          "#{@config.API_HOST}/faye",
+          "#{@config.APP_HOST}/faye",
           body: message_body(message)
         )
       puts "(#{response.status})"
