@@ -47,6 +47,19 @@ module Jobify
             Representer::UploadRequest.new(result.value!.message).to_json
           end
 
+          routing.on Integer do |id|
+            routing.get do
+              result = Jobify::Service::RetrieveResume.new.call(id)
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::Resume.new(result.value!.message).to_json
+            end
+          end
+
           routing.on String do |identifier|
             routing.get do
               result = Service::AnalyseResume.new.call(identifier: identifier)

@@ -12,8 +12,8 @@ module Jobify
       end
 
       def resume(file)
-        data = @gateway.resume(file)
-        build_entity(data)
+        @gateway.resume(file)
+        # build_entity(data)
       end
 
       def build_entity(data)

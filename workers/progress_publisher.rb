@@ -12,7 +12,7 @@ module ResumeUpload
 
     def publish(message)
       print "Progress: #{message} "
-      print "[post: #{@config.API_HOST}/faye] "
+      print "[post: #{@config.APP_HOST}/faye] "
       response = HTTP.headers(content_type: 'application/json')
         .post(
           "#{@config.APP_HOST}/faye",
