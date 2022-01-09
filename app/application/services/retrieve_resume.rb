@@ -14,6 +14,8 @@ module Jobify
 
       private
 
+      DB_ERR_MSG = 'Having trouble accessing the database'
+
       def retrieve_resume_content(input)
         content = resume_content(input)
         Success(content)
